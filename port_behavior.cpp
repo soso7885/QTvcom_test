@@ -29,9 +29,18 @@ int Tester::openSerialPort(void)
 void Tester::closeSerialPort(void)
 {
 	serial.close();
-//	closePortStatus();
-//	ui->startButton1->setEnabled(true);
-//	ui->statusBar->showMessage("Closing connection....");
-}   
+//	emit closeUpdate();
+	ui->startButton1->setEnabled(true);
+	// XXX
+	ui->statusBar->showMessage("Closing connection....");
+}
+	
+void Tester::freeResrc(void)
+{
+	// XXX
+	qDebug() << "The closing thread :" << QThread::currentThread();   
+	QThread::currentThread()->quit();
+	QThread::currentThread()->wait();
+}
 
 

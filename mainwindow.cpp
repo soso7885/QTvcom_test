@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -15,37 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-//	closeSerialPort();
 	delete ui;
 }
-
-Tester::Tester(Ui::MainWindow *ui):serial(this)
-{
-	
-	this->ui = ui;
-	this->test = 1;
-}
-
-Tester::~Tester(void)
-{
-	/* TODO: free the QThread resource */
-}
-
-void Tester::startTest(void)
-{
-	printf("Cretae Thread success!!!\n");
-
-	if(openSerialPort() == -1){
-		//FIXME
-//		QMessageBox::critical(MainWindow(), "Error", pInfo.serial.errorString());
-	}else{
-		printf("Open Port success !\n");
-		simpleTest();
-	}
-//	inHomeTest();
-	
-	emit finished();
-}	
 
 void MainWindow::startButton_clicked(void)
 {
@@ -58,13 +28,42 @@ void MainWindow::startButton_clicked(void)
 	connect(tester, SIGNAL(finished()), thread, SLOT(quit()));
 	connect(tester, SIGNAL(finished()), tester, SLOT(deleteLater()));
 	connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
+	/* Status signal connection !! */
+	connect(tester, SIGNAL(openUpdate()), this, SLOT(openPortUpdate()));
+	connect(tester, SIGNAL(closeUpdate()), this, SLOT(closePortUpdate()));
+	connect(tester, SIGNAL(OKUpdate()), this, SLOT(OKPortUpdate()));
+	connect(tester, SIGNAL(resUpdate(struct testResult*)), this, SLOT(resPortUpdate(struct testResult*)));
+
+	this->testerVect[0] = tester;
+	qDebug() << "new class tester :" << tester;
+	qDebug() << "Main thread :" << QThread::currentThreadId();
+	qDebug() << "Create sub thread :" << thread;
+
 	/* Start to VCOM Test */
 	thread->start();
 }
 
 void MainWindow::closeButton_clicked(void)
 {
-//	closeSerialPort();
+	testerVect[0]->isRunning = 0;
 }
 
+void MainWindow::openPortUpdate(void)
+{
+	openPortStatus();	
+}
 
+void MainWindow::closePortUpdate(void)
+{
+	closePortStatus();
+}
+
+void MainWindow::OKPortUpdate(void)
+{
+	portOKStatus();
+}
+
+void MainWindow::resPortUpdate(struct testResult *tRes)
+{
+	updateResult(tRes);
+}

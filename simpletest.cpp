@@ -25,8 +25,9 @@ void Tester::simpleTest(void)
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
+	isRunning = 1;
 	/* Initial End */
-	
+
 	do{
 		/* Write data */
 		if(serial.isWritable()){
@@ -48,21 +49,17 @@ void Tester::simpleTest(void)
 		}
 		/* Read data */
 		if(serial.isReadable()){
-			printf("In readabele\n");
 			rxbuf = serial.readAll();	// appoint the read buffer
 			do{
 				rxbuf.append(serial.readAll());		// read data
 			}while(serial.waitForReadyRead(READWAITTIME));
 		
-			printf("Out of do-while\n");	
 			if(serial.error() == QSerialPort::ReadError){
-				printf("error\n");
 				stdo << QObject::tr("Failed to read data, error %1").arg(serial.errorString());
 				closeSerialPort();	
 				break;
 			}
 			if(serial.error() == QSerialPort::TimeoutError && rxbuf.isEmpty()){
-				printf("timout error\n");
 				stdo << QObject::tr("Read timeout and read nothing (%1)").arg(serial.errorString());
 				closeSerialPort();
 				break;
@@ -72,13 +69,18 @@ void Tester::simpleTest(void)
 
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
 			tRes.round++;
-	//		portOKStatus();
-	//		updateResult(&tRes);
-			tRes.txlen = 0;
-			tRes.rxlen = 0;
+			qDebug() << "round :" << tRes.round;
+			emit OKUpdate();
+			emit resUpdate(&tRes);
 		}
-	}while(tRes.round < 10);
-//	}while(0);
+
+	}while(isRunning);
+	
+	emit closeUpdate();	
+	closeSerialPort();
+	freeResrc();
+	// XXX
+	delete this;	
 }	
 
 		

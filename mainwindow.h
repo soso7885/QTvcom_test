@@ -11,6 +11,9 @@
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QThread>
+#include <QVector>
+#include <stdio.h>
+#include <QDebug>
 
 #define TXDATALEN		1024
 #define WRITEWAITTIME	1000
@@ -31,11 +34,44 @@ struct testResult{
 	int round;
 };
 
-void closeSerialPort(void);
+/*------------------------------------------------*/
+class Tester : public QObject
+{
+	Q_OBJECT
 
+private:
+	Ui::MainWindow *ui;
+	struct port_info pInfo;
+	QSerialPort serial;
 
-//void simpleTest(QSerialPort *serial);
-//void inHomeTest(int test);
+// TODO for inhome_test
+	int test;
+	
+	void inHomeTest(void);
+	void simpleTest(void);
+	int openSerialPort(void);
+	void closeSerialPort(void);
+	void freeResrc(void);
+
+public:
+	explicit Tester(Ui::MainWindow *ui);
+	~Tester(void);
+	
+	bool isRunning;	// MainWindow will use it
+
+public slots:
+	void startTest(void);
+
+signals:
+	void finished(void);
+	void error(QString err);
+
+	void openUpdate(void);
+	void closeUpdate(void);
+	void OKUpdate(void);
+	void resUpdate(struct testResult *tRes);
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -43,6 +79,8 @@ class MainWindow : public QMainWindow
 
 private:
 	Ui::MainWindow *ui;
+	Tester *testerVect[16];
+//	QThread *threadVect[16];
 
 public:
 	explicit MainWindow(QWidget *parent = 0);
@@ -57,42 +95,15 @@ public:
 private slots:
 	void startButton_clicked(void);
 	void closeButton_clicked(void);
-/*	
-	void openPortStatus(void);
-	void closePortStatus(void);
-	void portOKStatus(void);
-	void portErrStatus(void);
-	void updateResult(struct testResult *tRes);
-*/
-};
-
-class Tester : public QObject
-{
-	Q_OBJECT
-
-private:
-	Ui::MainWindow *ui;
-	struct port_info pInfo;
-	QSerialPort serial;
-	
-// FIXME for inhome_test
-	int test;
-	
-	void inHomeTest(void);
-	void simpleTest(void);
-	int openSerialPort(void);
-	void closeSerialPort(void);
-
-public:
-	explicit Tester(Ui::MainWindow *ui);
-	~Tester(void);
 
 public slots:
-	void startTest(void);
+	void openPortUpdate(void);
+	void closePortUpdate(void);
+	void OKPortUpdate(void);
+	void resPortUpdate(struct testResult *tRes);
 
 signals:
-	void finished(void);
-	void error(QString err);
+	void shouldClosePort(void);
 
 };
 
