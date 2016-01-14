@@ -3,9 +3,23 @@
 
 int Tester::openSerialPort(void)
 {           
-	pInfo.BaudRate = ui->comboBox1->currentText().toInt();
-	pInfo.name = ui->comName1->text(); 
+	switch (num){
+		case COM1:
+			pInfo.BaudRate = ui->comboBox1->currentText().toInt();
+			pInfo.name = ui->comName1->text();
+			qDebug() << "COM1 open";
+			break;
+		
+		case COM2:
+			pInfo.BaudRate = ui->comboBox2->currentText().toInt();
+			// FIXME : fix the UI combobox name to comName2
+	//		pInfo.name = ui->comName2->text();
+			qDebug() << "COM2 open";
+			break;
+	}
+	
 	serial.setPortName(pInfo.name);
+
 	
 	if(serial.open(QIODevice::ReadWrite)){
 		serial.setBaudRate(pInfo.BaudRate);
@@ -15,13 +29,14 @@ int Tester::openSerialPort(void)
 		serial.setFlowControl(QSerialPort::NoFlowControl);
 	}else{
 		ui->statusBar->showMessage("Open port error");
-		ui->startButton1->setEnabled(true);
+		emit buttonUpdate(num, 1);
+		freeResrc();
 		return -1;
 	}
 
 	ui->statusBar->showMessage(QString("Connected to %1, BaudRate %2.")
 								.arg(pInfo.name).arg(pInfo.BaudRate));
-	ui->startButton1->setEnabled(false);
+	emit buttonUpdate(num, 0);
 
 	return 0;
 }
@@ -29,8 +44,7 @@ int Tester::openSerialPort(void)
 void Tester::closeSerialPort(void)
 {
 	serial.close();
-//	emit closeUpdate();
-	ui->startButton1->setEnabled(true);
+	emit buttonUpdate(num, 1);
 	// XXX
 	ui->statusBar->showMessage("Closing connection....");
 }

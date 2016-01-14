@@ -1,8 +1,10 @@
 #include "mainwindow.h"                                                                                                                                                               
 #include "ui_mainwindow.h"
                                         
-Tester::Tester(Ui::MainWindow *ui):serial(this)      
-{       
+Tester::Tester(Ui::MainWindow *ui, int num) :
+		serial(this)
+{     
+	this->num = num;  
 	this->ui = ui;
 	this->test = 1;
 }   
@@ -17,7 +19,7 @@ void Tester::startTest(void)
     if(openSerialPort() == -1){                      
 		QMessageBox::critical(0, "Error", serial.errorString());
 	}else{
-		emit openUpdate();
+		emit openUpdate(num);
 		/* Start VCOM test */
 		simpleTest();
 	}

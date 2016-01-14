@@ -15,9 +15,13 @@
 #include <stdio.h>
 #include <QDebug>
 
+#define COM1	1
+#define COM2	2
+
 #define TXDATALEN		1024
 #define WRITEWAITTIME	1000
 #define READWAITTIME	1000
+
 
 namespace Ui{
 	class MainWindow;
@@ -40,6 +44,7 @@ class Tester : public QObject
 	Q_OBJECT
 
 private:
+	int num;	// which ComPort is running
 	Ui::MainWindow *ui;
 	struct port_info pInfo;
 	QSerialPort serial;
@@ -54,7 +59,7 @@ private:
 	void freeResrc(void);
 
 public:
-	explicit Tester(Ui::MainWindow *ui);
+	explicit Tester(Ui::MainWindow *ui, int num);
 	~Tester(void);
 	
 	bool isRunning;	// MainWindow will use it
@@ -66,10 +71,12 @@ signals:
 	void finished(void);
 	void error(QString err);
 
-	void openUpdate(void);
-	void closeUpdate(void);
-	void OKUpdate(void);
-	void resUpdate(struct testResult *tRes);
+	void openUpdate(int num);
+	void closeUpdate(int num);
+	void OKUpdate(int num);
+	void resUpdate(struct testResult *tRes, int num);
+	
+	void buttonUpdate(int num, bool able);
 };
 
 
@@ -80,30 +87,33 @@ class MainWindow : public QMainWindow
 private:
 	Ui::MainWindow *ui;
 	Tester *testerVect[16];
-//	QThread *threadVect[16];
+
+	void initTester(int num);
+	void closeTester(int num);
 
 public:
 	explicit MainWindow(QWidget *parent = 0);
 	~MainWindow(void);
 
-	void openPortStatus(void);
-	void closePortStatus(void);
-	void portOKStatus(void);
-	void portErrStatus(void);
-	void updateResult(struct testResult *tRes);
+	void openPortStatus(int num);
+	void closePortStatus(int num);
+	void portOKStatus(int num);
+	void portErrStatus(int num);
+	void updateResult(struct testResult *tRes, int num);
 
 private slots:
-	void startButton_clicked(void);
-	void closeButton_clicked(void);
+	void startButton1_clicked(void);
+	void closeButton1_clicked(void);
+	
+	void startButton2_clicked(void);
+	void closeButton2_clicked(void);
 
 public slots:
-	void openPortUpdate(void);
-	void closePortUpdate(void);
-	void OKPortUpdate(void);
-	void resPortUpdate(struct testResult *tRes);
-
-signals:
-	void shouldClosePort(void);
+	void openPortUpdate(int num);
+	void closePortUpdate(int num);
+	void OKPortUpdate(int num);
+	void resPortUpdate(struct testResult *tRes, int num);
+	void buttonSwitch(int num, bool able);
 
 };
 

@@ -17,6 +17,7 @@ FORMS += mainwindow.ui
 SOURCES +=  main.cpp            \
             mainwindow.cpp      \
             simpletest.cpp      \
+			button.cpp			\
             result_disp.cpp     \
             port_behavior.cpp   \
             inhometest.cpp      \

@@ -1,30 +1,30 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-void MainWindow::openPortStatus(void)
+void MainWindow::openPortStatus(int num)
 {
-	ui->treeWidget->topLevelItem(0)->setText(1, "Open");
+	ui->treeWidget->topLevelItem(num-1)->setText(1, "Open");
 }
 
-void MainWindow::closePortStatus(void)
+void MainWindow::closePortStatus(int num)
 {
-	ui->treeWidget->topLevelItem(0)->setText(1, "Close");
+	ui->treeWidget->topLevelItem(num-1)->setText(1, "Close");
 }
 
-void MainWindow::portOKStatus(void)
+void MainWindow::portOKStatus(int num)
 {
-	ui->treeWidget->topLevelItem(0)->setText(2, "OK");
+	ui->treeWidget->topLevelItem(num-1)->setText(2, "OK");
 }
 
-void MainWindow::portErrStatus(void)
+void MainWindow::portErrStatus(int num)
 {
-	ui->treeWidget->topLevelItem(0)->setText(2, "Error");
+	ui->treeWidget->topLevelItem(num-1)->setText(2, "Error");
 }
 
-void MainWindow::updateResult(struct testResult *tRes)
+void MainWindow::updateResult(struct testResult *tRes, int num)
 {
-	ui->treeWidget->topLevelItem(0)->child(0)->setText(1, QString::number(tRes->round));
-	ui->treeWidget->topLevelItem(0)->child(1)->setText(1, QString::number(tRes->txlen));
-	ui->treeWidget->topLevelItem(0)->child(2)->setText(1, QString::number(tRes->rxlen));
+	ui->treeWidget->topLevelItem(num-1)->child(0)->setText(1, QString::number(tRes->round));
+	ui->treeWidget->topLevelItem(num-1)->child(1)->setText(1, QString::number(tRes->txlen));
+	ui->treeWidget->topLevelItem(num-1)->child(2)->setText(1, QString::number(tRes->rxlen));
 }
 

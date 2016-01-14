@@ -50,6 +50,7 @@ void Tester::simpleTest(void)
 		/* Read data */
 		if(serial.isReadable()){
 			rxbuf = serial.readAll();	// appoint the read buffer
+		
 			do{
 				rxbuf.append(serial.readAll());		// read data
 			}while(serial.waitForReadyRead(READWAITTIME));
@@ -70,13 +71,13 @@ void Tester::simpleTest(void)
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
 			tRes.round++;
 			qDebug() << "round :" << tRes.round;
-			emit OKUpdate();
-			emit resUpdate(&tRes);
+			emit OKUpdate(num);
 		}
 
+		emit resUpdate(&tRes, num);
 	}while(isRunning);
 	
-	emit closeUpdate();	
+	emit closeUpdate(num);	
 	closeSerialPort();
 	freeResrc();
 	// XXX
