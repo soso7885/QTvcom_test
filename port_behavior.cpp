@@ -3,7 +3,7 @@
 
 int Tester::openSerialPort(void)
 {           
-	pInfo.BaudRate = ui->comboBox->currentText().toInt();
+	pInfo.BaudRate = ui->comboBox1->currentText().toInt();
 	pInfo.name = ui->comName1->text(); 
 	serial.setPortName(pInfo.name);
 	
