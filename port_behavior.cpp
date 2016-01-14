@@ -12,10 +12,13 @@ int Tester::openSerialPort(void)
 		
 		case COM2:
 			pInfo.BaudRate = ui->comboBox2->currentText().toInt();
-			// FIXME : fix the UI combobox name to comName2
-	//		pInfo.name = ui->comName2->text();
+			pInfo.name = ui->comName2->text();
 			qDebug() << "COM2 open";
 			break;
+		
+		default:
+			qDebug() << "ERROR, No such ComPort" << num;
+			return -1;
 	}
 	
 	serial.setPortName(pInfo.name);

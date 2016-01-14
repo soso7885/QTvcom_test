@@ -26,10 +26,10 @@ MainWindow::~MainWindow()
 void MainWindow::initTester(int num)
 {
 	// TODO : Maybe check input argument first !
-	QThread *thread = new QThread;		// new a QThread 
+	QThread *thread = new QThread;			// new a QThread 
 	Tester *tester = new Tester(ui, num);	// new Tester
 
-	tester->moveToThread(thread);				// combine thread
+	tester->moveToThread(thread);			// combine thread
 	connect(thread, SIGNAL(started()), tester, SLOT(startTest()));	// connect started to startTest
 	connect(tester, SIGNAL(finished()), thread, SLOT(quit()));
 	connect(tester, SIGNAL(finished()), tester, SLOT(deleteLater()));

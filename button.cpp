@@ -32,6 +32,9 @@ void MainWindow::buttonSwitch(int num, bool able)
 			able?	ui->startButton2->setEnabled(true):
 					ui->startButton2->setEnabled(false);
 			break;
+		default:
+			qDebug() << "ERROR, no such ComPort" << num;
+			return;
 	}
 }   
 
