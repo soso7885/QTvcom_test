@@ -207,6 +207,9 @@
            <height>31</height>
           </rect>
          </property>
+         <property name="currentText">
+          <string>9600</string>
+         </property>
          <item>
           <property name="text">
            <string>50</string>
@@ -397,7 +400,7 @@
           <string>COM port name</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="comeName2">
+        <widget class="QLineEdit" name="comName2">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -415,6 +418,12 @@
            <width>111</width>
            <height>31</height>
           </rect>
+         </property>
+         <property name="currentText">
+          <string>9600</string>
+         </property>
+         <property name="currentIndex">
+          <number>11</number>
          </property>
          <item>
           <property name="text">
@@ -526,8 +535,14 @@
            <height>27</height>
           </rect>
          </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
          <property name="text">
           <string>Start</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QPushButton" name="closeButton2">
@@ -552,6 +567,13 @@
           <bool>false</bool>
          </property>
         </widget>
+        <zorder>label_3</zorder>
+        <zorder>label_4</zorder>
+        <zorder>comName2</zorder>
+        <zorder>comboBox2</zorder>
+        <zorder>startButton2</zorder>
+        <zorder>closeButton2</zorder>
+        <zorder>treeWidget</zorder>
        </widget>
       </widget>
      </item>
