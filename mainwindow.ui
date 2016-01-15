@@ -90,6 +90,11 @@
          <string/>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
       </item>
       <item>
        <property name="text">
@@ -126,6 +131,11 @@
         </property>
         <property name="text">
          <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
         </property>
        </item>
       </item>
@@ -169,7 +179,7 @@
     <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
    </property>
    <property name="windowTitle">
-    <string>Serial Setting</string>
+    <string>ComPort Setting</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
@@ -178,8 +188,14 @@
     <layout class="QGridLayout" name="gridLayout_4">
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -384,7 +400,7 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>140</x>
+           <x>150</x>
            <y>420</y>
            <width>99</width>
            <height>27</height>
@@ -406,6 +422,13 @@
           <bool>false</bool>
          </property>
         </widget>
+        <zorder>label</zorder>
+        <zorder>comboBox1</zorder>
+        <zorder>label_2</zorder>
+        <zorder>comName1</zorder>
+        <zorder>startButton1</zorder>
+        <zorder>closeButton1</zorder>
+        <zorder>treeWidget</zorder>
        </widget>
        <widget class="QWidget" name="tab_2">
         <attribute name="title">
@@ -638,13 +661,6 @@
           </rect>
          </property>
         </widget>
-        <zorder>startButton2</zorder>
-        <zorder>closeButton2</zorder>
-        <zorder>treeWidget</zorder>
-        <zorder>label_3</zorder>
-        <zorder>comboBox2</zorder>
-        <zorder>label_4</zorder>
-        <zorder>comName2</zorder>
        </widget>
       </widget>
      </item>

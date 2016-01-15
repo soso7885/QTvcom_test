@@ -85,7 +85,7 @@ void Tester::simpleTest(void)
 			if(tRes.err != 0){
 				QString *err = new QString;
 				*err = "Data incorrect, round: ";
-				err->append(QString::number(round));
+				err->append(QString::number(tRes.round));
 				qDebug() << *err;
 				emit errUpdate(com, *err);
 				delete err;
