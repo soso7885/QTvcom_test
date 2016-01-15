@@ -56,8 +56,6 @@ void Tester::closeSerialPort(void)
 {
 	serial.close();
 	emit buttonUpdate(num, 1);
-	// XXX
-	ui->statusBar->showMessage("Closing connection....");
 }
 	
 void Tester::freeResrc(void)
