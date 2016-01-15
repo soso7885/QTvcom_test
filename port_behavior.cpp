@@ -3,7 +3,7 @@
 
 int Tester::takePortInfo(void)
 {
-	switch(num){
+	switch(com){
 		case COM1:
 			pInfo.BaudRate = ui->comboBox1->currentText().toInt();
 			pInfo.name = ui->comName1->text();
@@ -17,7 +17,7 @@ int Tester::takePortInfo(void)
 			break;
 		
 		default:
-			qDebug("ERROR ! No such ComPort %d", num);
+			qDebug("ERROR ! No such ComPort %d", com);
 			return -1;
 	}
 	
@@ -40,14 +40,19 @@ int Tester::openSerialPort(void)
 		serial.setFlowControl(QSerialPort::NoFlowControl);
 	}else{
 		ui->statusBar->showMessage("Open port error");
-		emit buttonUpdate(num, 1);
+		emit buttonUpdate(com, 1);
 		freeResrc();
 		return -1;
 	}
-
+	/*
+	 * XXX
+	 * Suppose the modification about UI should in MainWindow,
+	 * but it's hard to new struct `pInfo` and get `Port info`
+	 * in MainWindow at the same time
+	*/
 	ui->statusBar->showMessage(QString("Connected to %1, BaudRate %2.")
 								.arg(pInfo.name).arg(pInfo.BaudRate));
-	emit buttonUpdate(num, 0);
+	emit buttonUpdate(com, 0);
 
 	return 0;
 }
@@ -55,12 +60,11 @@ int Tester::openSerialPort(void)
 void Tester::closeSerialPort(void)
 {
 	serial.close();
-	emit buttonUpdate(num, 1);
+	emit buttonUpdate(com, 1);
 }
 	
 void Tester::freeResrc(void)
 {
-	// XXX
 	qDebug() << "The closing thread :" << QThread::currentThread();   
 	QThread::currentThread()->quit();
 	QThread::currentThread()->wait();

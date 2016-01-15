@@ -23,6 +23,7 @@ void Tester::simpleTest(void)
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
+	tRes.err = 0;
 	isRunning = 1;
 	/* Initial End */
 	
@@ -35,7 +36,7 @@ void Tester::simpleTest(void)
 				*err = "Write failed: ";
 				err->append(serial.errorString());
 				qDebug() << *err;
-				emit errUpdate(num, *err);
+				emit errUpdate(com, *err);
 				delete err;
 				break;
 			}
@@ -48,7 +49,7 @@ void Tester::simpleTest(void)
 				*err = "Write timeout: ";
 				err->append(serial.errorString());
 				qDebug() << *err;
-				emit errUpdate(num, *err);
+				emit errUpdate(com, *err);
 				delete err;
 				break;
 			}
@@ -66,7 +67,7 @@ void Tester::simpleTest(void)
 				*err = "Read failed: ";
 				err->append(serial.errorString());
 				qDebug() << *err;
-				emit errUpdate(num, *err);
+				emit errUpdate(com, *err);
 				delete err;
 				break;
 			}
@@ -75,33 +76,36 @@ void Tester::simpleTest(void)
 				*err = "Read timeout: ";
 				err->append(serial.errorString());
 				qDebug() << *err;
-				emit errUpdate(num, *err);
+				emit errUpdate(com, *err);
 				delete err;
 				break;
+			}
+			/* Data compare */
+			tRes.err = memcmp(rxbuf.data(), txbuf.data(), TXDATALEN);
+			if(tRes.err != 0){
+				QString *err = new QString;
+				*err = "Data incorrect, round: ";
+				err->append(QString::number(round));
+				qDebug() << *err;
+				emit errUpdate(com, *err);
+				delete err;
 			}
 			tRes.rxlen = rxbuf.size();
 		}
 
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
 			tRes.round++;
-			qDebug("Com %d, Round %d", num, tRes.round);
-			emit OKUpdate(num);
+			qDebug("Com %d, Round %d", com, tRes.round);
+			if(tRes.err == 0){
+				emit OKUpdate(com);
+			}
 		}
-
-		emit resUpdate(&tRes, num);
+		emit resUpdate(&tRes, com);
 	}while(isRunning);
 	
-	emit closeUpdate(num);
-	/* FIXME
-	 * For segmention fault in QThread(error 4 in libQt5Gui.so.5.2.1)
-	 * while closing, I think `freeResrc` is too quick to free itself
-	 * while the main thread haven't hadle signal yet, so add the `wait()`.
-	 * Unfortunately, it doesn't fix that, but it truly reduce the incidence
-	*/
-	QThread::currentThread()->wait();
+	emit closeUpdate(com);
 	closeSerialPort();
 	freeResrc();
-	// XXX
 	delete this;	
 }	
 

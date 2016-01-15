@@ -21,9 +21,9 @@ void MainWindow::closeButton2_clicked(void)
 	closeTester(COM2);
 }
 
-void MainWindow::buttonSwitch(int num, bool able)
+void MainWindow::buttonSwitch(int com, bool able)
 {   
-	switch(num){
+	switch(com){
 		case COM1:
 			able?	ui->startButton1->setEnabled(true) : 
 					ui->startButton1->setEnabled(false); 
@@ -33,8 +33,7 @@ void MainWindow::buttonSwitch(int num, bool able)
 					ui->startButton2->setEnabled(false);
 			break;
 		default:
-			qDebug() << "ERROR, no such ComPort" << num;
-			return;
+			qDebug() << "ERROR, no such ComPort" << com;
 	}
 }   
 

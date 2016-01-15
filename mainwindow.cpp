@@ -23,11 +23,11 @@ MainWindow::~MainWindow()
 	delete ui;
 }
  
-void MainWindow::initTester(int num)
+void MainWindow::initTester(int com)
 {
 	// TODO : Maybe check input argument first !
 	QThread *thread = new QThread;			// new a QThread 
-	Tester *tester = new Tester(ui, num);	// new Tester
+	Tester *tester = new Tester(ui, com);	// new Tester
 
 	tester->moveToThread(thread);			// combine thread
 	connect(thread, SIGNAL(started()), tester, SLOT(startTest()));	// connect started to startTest
@@ -44,8 +44,8 @@ void MainWindow::initTester(int num)
 	/* Button switch */
 	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonSwitch(int, bool)));
 
-	this->testerVect[num-1] = tester;
-	qDebug() << "Create ComPort" << num;
+	this->testerVect[com-1] = tester;
+	qDebug() << "Create ComPort" << com;
 	qDebug() << "new class tester :" << tester;
 	qDebug() << "Create thread :" << thread;
 
@@ -53,34 +53,36 @@ void MainWindow::initTester(int num)
 	thread->start();
 }
 
-void MainWindow::closeTester(int num)
+void MainWindow::closeTester(int com)
 {
-	testerVect[num-1]->isRunning = 0;
+	testerVect[com-1]->isRunning = 0;
+	ui->statusBar->showMessage(QString("Closing COM%1 ...")
+								.arg(com)); 
 }
 
-void MainWindow::openPortUpdate(int num)
+void MainWindow::openPortUpdate(int com)
 {
-	openPortStatus(num);	
+	openPortStatus(com);	
 }
 
-void MainWindow::closePortUpdate(int num)
+void MainWindow::closePortUpdate(int com)
 {
-	closePortStatus(num);
+	closePortStatus(com);
 }
 
-void MainWindow::OKPortUpdate(int num)
+void MainWindow::OKPortUpdate(int com)
 {
-	portOKStatus(num);
+	portOKStatus(com);
 }
 
-void MainWindow::errPortUpdate(int num, QString errMsg)
+void MainWindow::errPortUpdate(int com, QString errMsg)
 {
-	portErrStatus(num, errMsg);
+	portErrStatus(com, errMsg);
 }
 
-void MainWindow::resPortUpdate(struct testResult *tRes, int num)
+void MainWindow::resPortUpdate(struct testResult *tRes, int com)
 {
-	updateResult(tRes, num);
+	updateResult(tRes, com);
 }
 
 

@@ -45,7 +45,7 @@ class Tester : public QObject
 	Q_OBJECT
 
 private:
-	int num;	// which ComPort is running
+	int com;	// which ComPort is running
 	Ui::MainWindow *ui;
 	struct port_info pInfo;
 	QSerialPort serial;
@@ -60,7 +60,7 @@ private:
 	void freeResrc(void);
 
 public:
-	explicit Tester(Ui::MainWindow *ui, int num);
+	explicit Tester(Ui::MainWindow *ui, int com);
 	~Tester(void);
 	
 	/* Main thread will use it to close child thread */
@@ -75,13 +75,13 @@ signals:
 	void finished(void);
 	void error(QString err);
 
-	void openUpdate(int num);
-	void closeUpdate(int num);
-	void OKUpdate(int num);
-	void errUpdate(int num, QString errMsg);
-	void resUpdate(struct testResult *tRes, int num);
+	void openUpdate(int com);
+	void closeUpdate(int com);
+	void OKUpdate(int com);
+	void errUpdate(int com, QString errMsg);
+	void resUpdate(struct testResult *tRes, int com);
 	
-	void buttonUpdate(int num, bool able);
+	void buttonUpdate(int com, bool able);
 };
 
 
@@ -93,18 +93,18 @@ private:
 	Ui::MainWindow *ui;
 	Tester *testerVect[16];
 
-	void initTester(int num);
-	void closeTester(int num);
+	void initTester(int com);
+	void closeTester(int com);
 
 public:
 	explicit MainWindow(QWidget *parent = 0);
 	~MainWindow(void);
 
-	void openPortStatus(int num);
-	void closePortStatus(int num);
-	void portOKStatus(int num);
-	void portErrStatus(int num, QString errMsg);
-	void updateResult(struct testResult *tRes, int num);
+	void openPortStatus(int com);
+	void closePortStatus(int com);
+	void portOKStatus(int com);
+	void portErrStatus(int com, QString errMsg);
+	void updateResult(struct testResult *tRes, int com);
 
 private slots:
 	void startButton1_clicked(void);
@@ -114,13 +114,13 @@ private slots:
 	void closeButton2_clicked(void);
 
 public slots:
-	void openPortUpdate(int num);
-	void closePortUpdate(int num);
-	void OKPortUpdate(int num);
-	void errPortUpdate(int num, QString errMsg);
-	void resPortUpdate(struct testResult *tRes, int num);
+	void openPortUpdate(int com);
+	void closePortUpdate(int com);
+	void OKPortUpdate(int com);
+	void errPortUpdate(int com, QString errMsg);
+	void resPortUpdate(struct testResult *tRes, int com);
 
-	void buttonSwitch(int num, bool able);
+	void buttonSwitch(int com, bool able);
 
 };
 
