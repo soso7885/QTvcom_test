@@ -36,6 +36,7 @@ struct testResult{
 	qint64 txlen;
 	qint64 rxlen;
 	int round;
+	int err;
 };
 
 /*------------------------------------------------*/
@@ -50,19 +51,22 @@ private:
 	QSerialPort serial;
 
 // TODO for inhome_test
-	int test;
-	
+//	int test;
 	void inHomeTest(void);
-	void simpleTest(void);
+
 	int openSerialPort(void);
 	void closeSerialPort(void);
+	int takePortInfo(void);
 	void freeResrc(void);
 
 public:
 	explicit Tester(Ui::MainWindow *ui, int num);
 	~Tester(void);
 	
-	bool isRunning;	// MainWindow will use it
+	/* Main thread will use it to close child thread */
+	bool isRunning;
+
+	void simpleTest(void);
 
 public slots:
 	void startTest(void);
@@ -74,6 +78,7 @@ signals:
 	void openUpdate(int num);
 	void closeUpdate(int num);
 	void OKUpdate(int num);
+	void errUpdate(int num, QString errMsg);
 	void resUpdate(struct testResult *tRes, int num);
 	
 	void buttonUpdate(int num, bool able);
@@ -98,7 +103,7 @@ public:
 	void openPortStatus(int num);
 	void closePortStatus(int num);
 	void portOKStatus(int num);
-	void portErrStatus(int num);
+	void portErrStatus(int num, QString errMsg);
 	void updateResult(struct testResult *tRes, int num);
 
 private slots:
@@ -112,7 +117,9 @@ public slots:
 	void openPortUpdate(int num);
 	void closePortUpdate(int num);
 	void OKPortUpdate(int num);
+	void errPortUpdate(int num, QString errMsg);
 	void resPortUpdate(struct testResult *tRes, int num);
+
 	void buttonSwitch(int num, bool able);
 
 };

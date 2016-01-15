@@ -1,28 +1,36 @@
 #include <mainwindow.h>
 #include <ui_mainwindow.h>
 
-int Tester::openSerialPort(void)
-{           
-	switch (num){
+int Tester::takePortInfo(void)
+{
+	switch(num){
 		case COM1:
 			pInfo.BaudRate = ui->comboBox1->currentText().toInt();
 			pInfo.name = ui->comName1->text();
-			qDebug() << "COM1 open";
+			qDebug("ComPort 1 open");
 			break;
 		
 		case COM2:
 			pInfo.BaudRate = ui->comboBox2->currentText().toInt();
 			pInfo.name = ui->comName2->text();
-			qDebug() << "COM2 open";
+			qDebug("ComPort 2 open");
 			break;
 		
 		default:
-			qDebug() << "ERROR, No such ComPort" << num;
+			qDebug("ERROR ! No such ComPort %d", num);
 			return -1;
 	}
 	
-	serial.setPortName(pInfo.name);
+	return 0;
+}
 
+int Tester::openSerialPort(void)
+{
+	if(takePortInfo() == -1){
+		return -1;
+	}
+	
+	serial.setPortName(pInfo.name);
 	
 	if(serial.open(QIODevice::ReadWrite)){
 		serial.setBaudRate(pInfo.BaudRate);
@@ -59,5 +67,4 @@ void Tester::freeResrc(void)
 	QThread::currentThread()->quit();
 	QThread::currentThread()->wait();
 }
-
 

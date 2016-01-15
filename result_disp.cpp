@@ -16,9 +16,9 @@ void MainWindow::portOKStatus(int num)
 	ui->treeWidget->topLevelItem(num-1)->setText(2, "OK");
 }
 
-void MainWindow::portErrStatus(int num)
+void MainWindow::portErrStatus(int num, QString errMsg)
 {
-	ui->treeWidget->topLevelItem(num-1)->setText(2, "Error");
+	ui->treeWidget->topLevelItem(num-1)->setText(2, errMsg);
 }
 
 void MainWindow::updateResult(struct testResult *tRes, int num)

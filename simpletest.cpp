@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-QTextStream stdo(stdout);
-
 void Tester::simpleTest(void)
 {
 	int i;
@@ -27,23 +25,31 @@ void Tester::simpleTest(void)
 	tRes.round = 0;
 	isRunning = 1;
 	/* Initial End */
-
+	
 	do{
 		/* Write data */
 		if(serial.isWritable()){
 			tRes.txlen = serial.write(txbuf);
 			if(tRes.txlen < 0){
-				stdo << QObject::tr("Write failed, error %1").arg(serial.errorString()) << endl;
-				closeSerialPort();
+				QString *err = new QString;
+				*err = "Write failed: ";
+				err->append(serial.errorString());
+				qDebug() << *err;
+				emit errUpdate(num, *err);
+				delete err;
 				break;
 			}
 			if(tRes.txlen != txbuf.size()){
-				stdo << QObject::tr("txlen(%1) != %2").arg(tRes.txlen).arg(txbuf.size()) << endl;
+				qDebug() << "txlen" << tRes.txlen << "!= 1024";
 				continue;
 			}
 			if(!serial.waitForBytesWritten(WRITEWAITTIME)){
-				stdo << QObject::tr("Write data timeout, error %1").arg(serial.errorString()) << endl;
-				closeSerialPort();
+				QString *err = new QString;
+				*err = "Write timeout: ";
+				err->append(serial.errorString());
+				qDebug() << *err;
+				emit errUpdate(num, *err);
+				delete err;
 				break;
 			}
 		}
@@ -56,13 +62,21 @@ void Tester::simpleTest(void)
 			}while(serial.waitForReadyRead(READWAITTIME));
 		
 			if(serial.error() == QSerialPort::ReadError){
-				stdo << QObject::tr("Failed to read data, error %1").arg(serial.errorString());
-				closeSerialPort();	
+				QString *err = new QString;
+				*err = "Read failed: ";
+				err->append(serial.errorString());
+				qDebug() << *err;
+				emit errUpdate(num, *err);
+				delete err;
 				break;
 			}
 			if(serial.error() == QSerialPort::TimeoutError && rxbuf.isEmpty()){
-				stdo << QObject::tr("Read timeout and read nothing (%1)").arg(serial.errorString());
-				closeSerialPort();
+				QString *err = new QString;
+				*err = "Read timeout: ";
+				err->append(serial.errorString());
+				qDebug() << *err;
+				emit errUpdate(num, *err);
+				delete err;
 				break;
 			}
 			tRes.rxlen = rxbuf.size();
@@ -70,14 +84,21 @@ void Tester::simpleTest(void)
 
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
 			tRes.round++;
-			qDebug() << "round :" << tRes.round;
+			qDebug("Com %d, Round %d", num, tRes.round);
 			emit OKUpdate(num);
 		}
 
 		emit resUpdate(&tRes, num);
 	}while(isRunning);
 	
-	emit closeUpdate(num);	
+	emit closeUpdate(num);
+	/* FIXME
+	 * For segmention fault in QThread(error 4 in libQt5Gui.so.5.2.1)
+	 * while closing, I think `freeResrc` is too quick to free itself
+	 * while the main thread haven't hadle signal yet, so add the `wait()`.
+	 * Unfortunately, it doesn't fix that, but it truly reduce the incidence
+	*/
+	QThread::currentThread()->wait();
 	closeSerialPort();
 	freeResrc();
 	// XXX

@@ -38,15 +38,16 @@ void MainWindow::initTester(int num)
 	connect(tester, SIGNAL(openUpdate(int)), this, SLOT(openPortUpdate(int)));
 	connect(tester, SIGNAL(closeUpdate(int)), this, SLOT(closePortUpdate(int)));
 	connect(tester, SIGNAL(OKUpdate(int)), this, SLOT(OKPortUpdate(int)));
+	connect(tester, SIGNAL(errUpdate(int, QString)), this, SLOT(errPortUpdate(int, QString)));
 	connect(tester, SIGNAL(resUpdate(struct testResult*, int)), this, SLOT(resPortUpdate(struct testResult*, int)));
 	
 	/* Button switch */
 	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonSwitch(int, bool)));
 
 	this->testerVect[num-1] = tester;
+	qDebug() << "Create ComPort" << num;
 	qDebug() << "new class tester :" << tester;
-	qDebug() << "Main thread :" << QThread::currentThreadId();
-	qDebug() << "Create sub thread :" << thread;
+	qDebug() << "Create thread :" << thread;
 
 	/* Start to VCOM Test */
 	thread->start();
@@ -70,6 +71,11 @@ void MainWindow::closePortUpdate(int num)
 void MainWindow::OKPortUpdate(int num)
 {
 	portOKStatus(num);
+}
+
+void MainWindow::errPortUpdate(int num, QString errMsg)
+{
+	portErrStatus(num, errMsg);
 }
 
 void MainWindow::resPortUpdate(struct testResult *tRes, int num)
