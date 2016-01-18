@@ -23,19 +23,46 @@
         <height>16777215</height>
        </size>
       </property>
+      <property name="indentation">
+       <number>20</number>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <attribute name="headerDefaultSectionSize">
+       <number>150</number>
+      </attribute>
       <column>
        <property name="text">
         <string>COM port</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Status</string>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Result</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
       </column>
       <item>
@@ -139,6 +166,156 @@
         </property>
        </item>
       </item>
+      <item>
+       <property name="text">
+        <string>COM3</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>COM4</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>COM5</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>COM6</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>COM7</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>COM8</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Round</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Write byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Read byte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Error</string>
+        </property>
+       </item>
+      </item>
      </widget>
     </item>
    </layout>
@@ -172,14 +349,22 @@
    <property name="minimumSize">
     <size>
      <width>463</width>
-     <height>394</height>
+     <height>442</height>
     </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Optima</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="features">
     <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
    </property>
    <property name="windowTitle">
-    <string>ComPort Setting</string>
+    <string>ComPort setting</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
