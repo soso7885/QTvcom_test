@@ -354,10 +354,8 @@
    </property>
    <property name="font">
     <font>
-     <family>Optima</family>
+     <family>Big Caslon</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
     </font>
    </property>
    <property name="features">
