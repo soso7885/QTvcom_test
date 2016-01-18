@@ -407,6 +407,12 @@
     <layout class="QGridLayout" name="gridLayout_4">
      <item row="0" column="0">
       <widget class="QToolBox" name="toolBox">
+       <property name="font">
+        <font>
+         <family>Cochin</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="mouseTracking">
         <bool>false</bool>
        </property>
@@ -422,7 +428,7 @@
           <x>0</x>
           <y>0</y>
           <width>439</width>
-          <height>206</height>
+          <height>230</height>
          </rect>
         </property>
         <attribute name="label">
