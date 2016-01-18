@@ -30,11 +30,11 @@
        <number>3</number>
       </property>
       <attribute name="headerDefaultSectionSize">
-       <number>150</number>
+       <number>130</number>
       </attribute>
       <column>
        <property name="text">
-        <string>COM port</string>
+        <string>COM Port</string>
        </property>
        <property name="font">
         <font>
@@ -80,6 +80,15 @@
        </property>
        <property name="text">
         <string>N/A</string>
+       </property>
+       <property name="background">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>255</green>
+          <blue>0</blue>
+         </color>
+        </brush>
        </property>
        <property name="flags">
         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -664,8 +673,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -904,8 +913,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1144,8 +1153,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1384,8 +1393,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1624,8 +1633,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1864,8 +1873,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
@@ -2104,8 +2113,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>230</height>
+          <width>98</width>
+          <height>28</height>
          </rect>
         </property>
         <attribute name="label">
