@@ -17,7 +17,7 @@
    <widget class="QTreeWidget" name="treeWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>5</x>
       <y>20</y>
       <width>400</width>
       <height>900</height>
@@ -699,7 +699,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -721,7 +721,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -734,7 +734,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -841,7 +841,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -866,7 +866,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -878,13 +878,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -900,13 +900,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -938,13 +938,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -966,13 +966,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -986,6 +986,14 @@
          </property>
         </widget>
         <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>2</y>
+           <width>47</width>
+           <height>13</height>
+          </rect>
+         </property>
          <property name="font">
           <font>
            <family>Futura</family>
@@ -1003,7 +1011,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -1016,7 +1024,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -1123,7 +1131,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -1145,7 +1153,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -1168,7 +1176,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -1190,7 +1198,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -1203,7 +1211,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -1310,7 +1318,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -1332,7 +1340,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -1344,13 +1352,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -1372,13 +1380,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -1408,7 +1416,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -1430,7 +1438,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -1443,7 +1451,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -1550,7 +1558,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -1572,7 +1580,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -1584,13 +1592,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -1612,13 +1620,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -1648,7 +1656,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -1670,7 +1678,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -1683,7 +1691,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -1790,7 +1798,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -1812,7 +1820,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -1824,13 +1832,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -1852,13 +1860,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -1888,7 +1896,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>56</width>
            <height>16</height>
           </rect>
@@ -1910,7 +1918,7 @@
          <property name="geometry">
           <rect>
            <x>117</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -1923,7 +1931,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -2030,7 +2038,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>94</width>
            <height>16</height>
           </rect>
@@ -2052,7 +2060,7 @@
          <property name="geometry">
           <rect>
            <x>120</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -2064,13 +2072,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -2092,13 +2100,13 @@
            <x>114</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -2128,7 +2136,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -2150,7 +2158,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -2163,7 +2171,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -2270,7 +2278,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -2292,7 +2300,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -2304,13 +2312,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -2332,13 +2340,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -2368,7 +2376,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -2390,7 +2398,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -2403,7 +2411,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -2510,7 +2518,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -2532,7 +2540,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -2544,13 +2552,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -2572,13 +2580,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -2593,6 +2601,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM9</string>
         </attribute>
@@ -2600,7 +2616,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -2622,7 +2638,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -2635,7 +2651,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -2742,7 +2758,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -2764,7 +2780,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -2776,13 +2792,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -2804,13 +2820,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -2825,6 +2841,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage10">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM10</string>
         </attribute>
@@ -2832,7 +2856,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -2854,7 +2878,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -2867,7 +2891,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -2974,7 +2998,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -2996,7 +3020,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -3008,13 +3032,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -3036,13 +3060,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -3057,6 +3081,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage11">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM11</string>
         </attribute>
@@ -3064,7 +3096,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -3077,7 +3109,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -3184,7 +3216,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -3206,7 +3238,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -3218,13 +3250,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -3246,13 +3278,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -3269,7 +3301,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -3289,6 +3321,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM12</string>
         </attribute>
@@ -3296,7 +3336,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -3318,7 +3358,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -3331,7 +3371,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -3438,7 +3478,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -3460,7 +3500,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -3472,13 +3512,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -3500,13 +3540,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -3521,6 +3561,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage13">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM13</string>
         </attribute>
@@ -3528,7 +3576,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -3550,7 +3598,7 @@
          <property name="geometry">
           <rect>
            <x>110</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -3563,7 +3611,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -3670,7 +3718,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -3692,7 +3740,7 @@
          <property name="geometry">
           <rect>
            <x>112</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -3704,13 +3752,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -3732,13 +3780,13 @@
            <x>106</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -3753,6 +3801,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage14">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM14</string>
         </attribute>
@@ -3760,7 +3816,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -3782,7 +3838,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -3795,7 +3851,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -3902,7 +3958,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -3924,7 +3980,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -3936,13 +3992,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -3964,13 +4020,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -3985,6 +4041,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM15</string>
         </attribute>
@@ -3992,7 +4056,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -4014,7 +4078,7 @@
          <property name="geometry">
           <rect>
            <x>101</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -4027,7 +4091,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -4134,7 +4198,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -4156,7 +4220,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -4168,13 +4232,13 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -4196,13 +4260,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
@@ -4217,6 +4281,14 @@
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage16">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>439</width>
+          <height>100</height>
+         </rect>
+        </property>
         <attribute name="label">
          <string>COM16</string>
         </attribute>
@@ -4224,7 +4296,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>12</y>
+           <y>2</y>
            <width>47</width>
            <height>16</height>
           </rect>
@@ -4246,7 +4318,7 @@
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>10</y>
+           <y>0</y>
            <width>104</width>
            <height>26</height>
           </rect>
@@ -4259,7 +4331,7 @@
           </font>
          </property>
          <property name="currentText">
-          <string>9600</string>
+          <string>50</string>
          </property>
          <item>
           <property name="text">
@@ -4366,7 +4438,7 @@
          <property name="geometry">
           <rect>
            <x>12</x>
-           <y>42</y>
+           <y>32</y>
            <width>78</width>
            <height>16</height>
           </rect>
@@ -4388,7 +4460,7 @@
          <property name="geometry">
           <rect>
            <x>104</x>
-           <y>42</y>
+           <y>32</y>
            <width>108</width>
            <height>21</height>
           </rect>
@@ -4400,13 +4472,12 @@
            <x>6</x>
            <y>73</y>
            <width>66</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -4428,13 +4499,13 @@
            <x>98</x>
            <y>73</y>
            <width>70</width>
-           <height>32</height>
+           <height>25</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Futura</family>
-           <pointsize>11</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
