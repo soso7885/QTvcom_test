@@ -12,16 +12,22 @@
 #include <QTreeWidgetItem>
 #include <QThread>
 #include <QVector>
-#include <stdio.h>
 #include <QDebug>
+#include <QBrush>
+#include <stdio.h>
 
 #define COM1	1
 #define COM2	2
+#define COM3	3
+#define COM4	4
+#define COM5	5
+#define COM6	6
+#define COM7	7
+#define COM8	8
 
 #define TXDATALEN		1024
 #define WRITEWAITTIME	1000
 #define READWAITTIME	1000
-
 
 namespace Ui{
 	class MainWindow;
@@ -45,14 +51,10 @@ class Tester : public QObject
 	Q_OBJECT
 
 private:
-	int com;	// which ComPort is running
 	Ui::MainWindow *ui;
 	struct port_info pInfo;
 	QSerialPort serial;
-
-// TODO for inhome_test
-//	int test;
-	void inHomeTest(void);
+	int com;	// To decide which ComPort is running
 
 	int openSerialPort(void);
 	void closeSerialPort(void);
@@ -112,6 +114,24 @@ private slots:
 	
 	void startButton2_clicked(void);
 	void closeButton2_clicked(void);
+
+	void startButton3_clicked(void);
+	void closeButton3_clicked(void);
+	
+	void startButton4_clicked(void);
+	void closeButton4_clicked(void);
+
+	void startButton5_clicked(void);
+	void closeButton5_clicked(void);
+
+	void startButton6_clicked(void);
+	void closeButton6_clicked(void);
+
+	void startButton7_clicked(void);
+	void closeButton7_clicked(void);
+
+	void startButton8_clicked(void);
+	void closeButton8_clicked(void);
 
 public slots:
 	void openPortUpdate(int com);

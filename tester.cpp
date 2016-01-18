@@ -23,6 +23,5 @@ void Tester::startTest(void)
 		/* Start VCOM test */
 		simpleTest();
 	}
-//  inHomeTest();
 }
 

@@ -20,5 +20,4 @@ SOURCES +=  main.cpp            \
 			button.cpp			\
             result_disp.cpp     \
             port_behavior.cpp   \
-            inhometest.cpp      \
 			tester.cpp			\

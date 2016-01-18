@@ -14,11 +14,13 @@ void MainWindow::closePortStatus(int com)
 void MainWindow::portOKStatus(int com)
 {
 	ui->treeWidget->topLevelItem(com-1)->setText(2, "OK");
+	ui->treeWidget->topLevelItem(com-1)->setForeground(2, QBrush(QColor(0, 255, 0)));
 }
 
 void MainWindow::portErrStatus(int com, QString errMsg)
 {
 	ui->treeWidget->topLevelItem(com-1)->setText(2, errMsg);
+	ui->treeWidget->topLevelItem(com-1)->setForeground(2, QBrush(QColor(255, 0, 0)));
 }
 
 void MainWindow::updateResult(struct testResult *tRes, int com)
