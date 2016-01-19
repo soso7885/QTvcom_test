@@ -92,6 +92,7 @@ signals:
 	void resUpdate(struct testResult *tRes, int com);
 	
 	void buttonUpdate(int com, bool able);
+	void openErrUpdate(QString errMsg);
 };
 
 
@@ -164,6 +165,23 @@ private slots:
 
 	void startButton16_clicked(void);
 	void closeButton16_clicked(void);
+	/* XXX: combine with buttonSwitch */
+	void startEnable1(void);
+	void startEnable2(void);
+	void startEnable3(void);
+	void startEnable4(void);
+	void startEnable5(void);
+	void startEnable6(void);
+	void startEnable7(void);
+	void startEnable8(void);
+	void startEnable9(void);
+	void startEnable10(void);
+	void startEnable11(void);
+	void startEnable12(void);
+	void startEnable13(void);
+	void startEnable14(void);
+	void startEnable15(void);
+	void startEnable16(void);
 
 public slots:
 	void openPortUpdate(int com);
@@ -174,6 +192,7 @@ public slots:
 
 	void buttonSwitch(int com, bool able);
 
+	void openPortErr(QString errMsg);
 };
 
 #endif

@@ -107,21 +107,13 @@ int Tester::openSerialPort(void)
 		serial.setStopBits(QSerialPort::OneStop);
 		serial.setFlowControl(QSerialPort::NoFlowControl);
 	}else{
-		ui->statusBar->showMessage("Open port error");
+		qDebug("Open Port error");
+		emit openErrUpdate(serial.errorString());
 		emit buttonUpdate(com, 1);
-		freeResrc();
 		return -1;
 	}
-	/*
-	 * XXX
-	 * Suppose the modification about UI should in MainWindow,
-	 * but it's hard to new struct `pInfo` and get `Port info`
-	 * in MainWindow at the same time
-	*/
-	ui->statusBar->showMessage(QString("Connected to %1, BaudRate %2.")
-								.arg(pInfo.name).arg(pInfo.BaudRate));
+	
 	emit buttonUpdate(com, 0);
-
 	return 0;
 }
 

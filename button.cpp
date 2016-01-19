@@ -3,7 +3,7 @@
 
 void MainWindow::startButton1_clicked(void)
 {
-	initTester(COM1);                                                                                                                                                                
+	initTester(COM1); 
 }
     
 void MainWindow::startButton2_clicked(void)

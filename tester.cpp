@@ -16,7 +16,7 @@ Tester::~Tester(void)
 void Tester::startTest(void)                         
 {                                                    
     if(openSerialPort() == -1){                      
-		QMessageBox::critical(0, "Error", serial.errorString());
+		freeResrc();
 	}else{
 		emit openUpdate(com);
 		/* Start VCOM test */

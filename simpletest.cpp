@@ -3,7 +3,8 @@
 
 void Tester::simpleTest(void)
 {
-	int i;
+	int i;	
+	int res = 0;
 	struct testResult tRes;
 	QByteArray txbuf;
 	QByteArray rxbuf;
@@ -23,7 +24,6 @@ void Tester::simpleTest(void)
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
-	tRes.err = 0;
 	isRunning = 1;
 	/* Initial End */
 	
@@ -33,7 +33,7 @@ void Tester::simpleTest(void)
 			tRes.txlen = serial.write(txbuf);
 			if(tRes.txlen < 0){
 				QString *err = new QString;
-				*err = "Write failed: ";
+				*err = "Write failed:\n";
 				err->append(serial.errorString());
 				qDebug() << *err;
 				emit errUpdate(com, *err);
@@ -46,7 +46,7 @@ void Tester::simpleTest(void)
 			}
 			if(!serial.waitForBytesWritten(WRITEWAITTIME)){
 				QString *err = new QString;
-				*err = "Write timeout: ";
+				*err = "Write timeout:\n";
 				err->append(serial.errorString());
 				qDebug() << *err;
 				emit errUpdate(com, *err);
@@ -64,7 +64,7 @@ void Tester::simpleTest(void)
 		
 			if(serial.error() == QSerialPort::ReadError){
 				QString *err = new QString;
-				*err = "Read failed: ";
+				*err = "Read failed:\n";
 				err->append(serial.errorString());
 				qDebug() << *err;
 				emit errUpdate(com, *err);
@@ -73,7 +73,7 @@ void Tester::simpleTest(void)
 			}
 			if(serial.error() == QSerialPort::TimeoutError && rxbuf.isEmpty()){
 				QString *err = new QString;
-				*err = "Read timeout: ";
+				*err = "Read timeout:\n";
 				err->append(serial.errorString());
 				qDebug() << *err;
 				emit errUpdate(com, *err);
@@ -81,10 +81,10 @@ void Tester::simpleTest(void)
 				break;
 			}
 			/* Data compare */
-			tRes.err = memcmp(rxbuf.data(), txbuf.data(), TXDATALEN);
-			if(tRes.err != 0){
+			res = memcmp(rxbuf.data(), txbuf.data(), TXDATALEN);
+			if(res){
 				QString *err = new QString;
-				*err = "Data incorrect, round: ";
+				*err = "Data incorrect, round:\n";
 				err->append(QString::number(tRes.round));
 				qDebug() << *err;
 				emit errUpdate(com, *err);
@@ -96,7 +96,7 @@ void Tester::simpleTest(void)
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
 			tRes.round++;
 			qDebug("Com %d, Round %d", com, tRes.round);
-			if(tRes.err == 0){
+			if(!res){
 				emit OKUpdate(com);
 			}
 		}

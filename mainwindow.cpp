@@ -87,6 +87,42 @@ MainWindow::MainWindow(QWidget *parent) :
 		this, SLOT(startButton16_clicked()));
 	connect(ui->closeButton16, SIGNAL(clicked()),
 		this, SLOT(closeButton16_clicked()));
+	/*
+	 * To advoid Com port name empty
+	 * XXX: Maybe can combine with buttonSwitch
+	*/
+	connect(ui->comName1, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable1()));	
+	connect(ui->comName2, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable2()));	
+	connect(ui->comName3, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable3()));	
+	connect(ui->comName4, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable4()));	
+	connect(ui->comName5, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable5()));	
+	connect(ui->comName6, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable6()));	
+	connect(ui->comName7, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable7()));	
+	connect(ui->comName8, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable8()));	
+	connect(ui->comName9, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable9()));	
+	connect(ui->comName10, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable10()));	
+	connect(ui->comName11, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable11()));	
+	connect(ui->comName12, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable12()));	
+	connect(ui->comName13, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable13()));	
+	connect(ui->comName14, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable14()));	
+	connect(ui->comName15, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable15()));	
+	connect(ui->comName16, SIGNAL(textChanged(const QString)), 
+				this, SLOT(startEnable16()));	
 }
 
 MainWindow::~MainWindow()
@@ -96,7 +132,8 @@ MainWindow::~MainWindow()
  
 void MainWindow::initTester(int com)
 {
-	// TODO : Maybe check input argument first !
+	ui->statusBar->showMessage(QString("Opening COM%1 ..."), arg(com));
+
 	QThread *thread = new QThread;			// new a QThread 
 	Tester *tester = new Tester(ui, com);	// new Tester
 
@@ -109,11 +146,16 @@ void MainWindow::initTester(int com)
 	connect(tester, SIGNAL(openUpdate(int)), this, SLOT(openPortUpdate(int)));
 	connect(tester, SIGNAL(closeUpdate(int)), this, SLOT(closePortUpdate(int)));
 	connect(tester, SIGNAL(OKUpdate(int)), this, SLOT(OKPortUpdate(int)));
-	connect(tester, SIGNAL(errUpdate(int, QString)), this, SLOT(errPortUpdate(int, QString)));
-	connect(tester, SIGNAL(resUpdate(struct testResult*, int)), this, SLOT(resPortUpdate(struct testResult*, int)));
+	connect(tester, SIGNAL(errUpdate(int, QString)), this, 
+					SLOT(errPortUpdate(int, QString)));
+	connect(tester, SIGNAL(resUpdate(struct testResult*, int)), this, 
+					SLOT(resPortUpdate(struct testResult*, int)));
 	
 	/* Button switch */
 	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonSwitch(int, bool)));
+	
+	/* Open Port error signal */
+	connect(tester, SIGNAL(openErrUpdate(QString)), this, SLOT(openPortErr(QString)));
 
 	this->testerVect[com-1] = tester;
 	qDebug() << "Create ComPort" << com;
@@ -156,4 +198,89 @@ void MainWindow::resPortUpdate(struct testResult *tRes, int com)
 	updateResult(tRes, com);
 }
 
+void MainWindow::openPortErr(QString errMsg)
+{
+	QMessageBox::critical(this, "Error", errMsg);
+	ui->statusBar->showMessage("Open Port error...");
+}
+
+void MainWindow::startEnable1(void)
+{
+	ui->startButton1->setEnabled(true);
+}
+
+void MainWindow::startEnable2(void)
+{
+	ui->startButton2->setEnabled(true);
+}
+
+void MainWindow::startEnable3(void)
+{
+	ui->startButton3->setEnabled(true);
+}
+
+void MainWindow::startEnable4(void)
+{
+	ui->startButton4->setEnabled(true);
+}
+
+void MainWindow::startEnable5(void)
+{
+	ui->startButton5->setEnabled(true);
+}
+
+void MainWindow::startEnable6(void)
+{
+	ui->startButton6->setEnabled(true);
+}
+
+void MainWindow::startEnable7(void)
+{
+	ui->startButton7->setEnabled(true);
+}
+
+void MainWindow::startEnable8(void)
+{
+	ui->startButton8->setEnabled(true);
+}
+
+void MainWindow::startEnable9(void)
+{
+	ui->startButton9->setEnabled(true);
+}
+
+void MainWindow::startEnable10(void)
+{
+	ui->startButton10->setEnabled(true);
+}
+
+void MainWindow::startEnable11(void)
+{
+	ui->startButton11->setEnabled(true);
+}
+
+void MainWindow::startEnable12(void)
+{
+	ui->startButton12->setEnabled(true);
+}
+
+void MainWindow::startEnable13(void)
+{
+	ui->startButton13->setEnabled(true);
+}
+
+void MainWindow::startEnable14(void)
+{
+	ui->startButton14->setEnabled(true);
+}
+
+void MainWindow::startEnable15(void)
+{
+	ui->startButton15->setEnabled(true);
+}
+
+void MainWindow::startEnable16(void)
+{
+	ui->startButton16->setEnabled(true);
+}
 
