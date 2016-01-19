@@ -44,6 +44,46 @@ int Tester::takePortInfo(void)
 			pInfo.name = ui->comName8->text();
 			qDebug("ComPort 8 open");
 			break;
+		case COM9:
+			pInfo.BaudRate = ui->comboBox9->currentText().toInt();
+			pInfo.name = ui->comName9->text();
+			qDebug("ComPort 9 open");
+			break;
+		case COM10:
+			pInfo.BaudRate = ui->comboBox10->currentText().toInt();
+			pInfo.name = ui->comName10->text();
+			qDebug("ComPort 10 open");
+			break;
+		case COM11:
+			pInfo.BaudRate = ui->comboBox11->currentText().toInt();
+			pInfo.name = ui->comName11->text();
+			qDebug("ComPort 11 open");
+			break;
+		case COM12:
+			pInfo.BaudRate = ui->comboBox12->currentText().toInt();
+			pInfo.name = ui->comName12->text();
+			qDebug("ComPort 12 open");
+			break;
+		case COM13:
+			pInfo.BaudRate = ui->comboBox13->currentText().toInt();
+			pInfo.name = ui->comName13->text();
+			qDebug("ComPort 13 open");
+			break;
+		case COM14:
+			pInfo.BaudRate = ui->comboBox14->currentText().toInt();
+			pInfo.name = ui->comName14->text();
+			qDebug("ComPort 14 open");
+			break;
+		case COM15:
+			pInfo.BaudRate = ui->comboBox15->currentText().toInt();
+			pInfo.name = ui->comName15->text();
+			qDebug("ComPort 15 open");
+			break;
+		case COM16:
+			pInfo.BaudRate = ui->comboBox16->currentText().toInt();
+			pInfo.name = ui->comName16->text();
+			qDebug("ComPort 16 open");
+			break;
 		default:
 			qDebug("ERROR ! No such ComPort %d", com);
 			return -1;

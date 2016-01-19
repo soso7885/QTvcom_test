@@ -7,46 +7,86 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-	/* COM port 1 */
+	/* COM1 button connect*/
 	connect(ui->startButton1, SIGNAL(clicked()), 
 		this, SLOT(startButton1_clicked()));
 	connect(ui->closeButton1, SIGNAL(clicked()), 
 		this, SLOT(closeButton1_clicked()));
-	/* COM port 2 */
+	/* COM2 button connect*/
 	connect(ui->startButton2, SIGNAL(clicked()),
 		this, SLOT(startButton2_clicked()));
 	connect(ui->closeButton2, SIGNAL(clicked()),
 		this, SLOT(closeButton2_clicked()));
-	/* COM port 3 */
+	/* COM3 button connect */
 	connect(ui->startButton3, SIGNAL(clicked()),
 		this, SLOT(startButton3_clicked()));
 	connect(ui->closeButton3, SIGNAL(clicked()),
 		this, SLOT(closeButton3_clicked()));
-	/* COM port 4 */
+	/* COM4 button connect*/
 	connect(ui->startButton4, SIGNAL(clicked()),
 		this, SLOT(startButton4_clicked()));
 	connect(ui->closeButton4, SIGNAL(clicked()),
 		this, SLOT(closeButton4_clicked()));
-	/* COM port 5 */
+	/* COM5 button connect*/
 	connect(ui->startButton5, SIGNAL(clicked()),
 		this, SLOT(startButton5_clicked()));
 	connect(ui->closeButton5, SIGNAL(clicked()),
 		this, SLOT(closeButton5_clicked()));
-	/* COM port 6 */
+	/* COM6 button connect*/
 	connect(ui->startButton6, SIGNAL(clicked()),
 		this, SLOT(startButton6_clicked()));
 	connect(ui->closeButton6, SIGNAL(clicked()),
 		this, SLOT(closeButton6_clicked()));
-	/* COM port 7 */
+	/* COM7 button connect*/
 	connect(ui->startButton7, SIGNAL(clicked()),
 		this, SLOT(startButton7_clicked()));
 	connect(ui->closeButton7, SIGNAL(clicked()),
 		this, SLOT(closeButton7_clicked()));
-	/* COM port 8 */
+	/* COM8 button connect*/
 	connect(ui->startButton8, SIGNAL(clicked()),
 		this, SLOT(startButton8_clicked()));
 	connect(ui->closeButton8, SIGNAL(clicked()),
 		this, SLOT(closeButton8_clicked()));
+	/* COM9 button connect*/
+	connect(ui->startButton9, SIGNAL(clicked()),
+		this, SLOT(startButton9_clicked()));
+	connect(ui->closeButton9, SIGNAL(clicked()),
+		this, SLOT(closeButton9_clicked()));
+	/* COM10 button connect*/
+	connect(ui->startButton10, SIGNAL(clicked()),
+		this, SLOT(startButton10_clicked()));
+	connect(ui->closeButton10, SIGNAL(clicked()),
+		this, SLOT(closeButton10_clicked()));
+	/* COM11 button connect*/
+	connect(ui->startButton11, SIGNAL(clicked()),
+		this, SLOT(startButton11_clicked()));
+	connect(ui->closeButton11, SIGNAL(clicked()),
+		this, SLOT(closeButton11_clicked()));
+	/* COM12 button connect*/
+	connect(ui->startButton12, SIGNAL(clicked()),
+		this, SLOT(startButton12_clicked()));
+	connect(ui->closeButton12, SIGNAL(clicked()),
+		this, SLOT(closeButton12_clicked()));
+	/* COM13 button connect*/
+	connect(ui->startButton13, SIGNAL(clicked()),
+		this, SLOT(startButton13_clicked()));
+	connect(ui->closeButton13, SIGNAL(clicked()),
+		this, SLOT(closeButton13_clicked()));
+	/* COM14 button connect*/
+	connect(ui->startButton14, SIGNAL(clicked()),
+		this, SLOT(startButton14_clicked()));
+	connect(ui->closeButton14, SIGNAL(clicked()),
+		this, SLOT(closeButton14_clicked()));
+	/* COM15 button connect*/
+	connect(ui->startButton15, SIGNAL(clicked()),
+		this, SLOT(startButton15_clicked()));
+	connect(ui->closeButton15, SIGNAL(clicked()),
+		this, SLOT(closeButton15_clicked()));
+	/* COM16 button connect*/
+	connect(ui->startButton16, SIGNAL(clicked()),
+		this, SLOT(startButton16_clicked()));
+	connect(ui->closeButton16, SIGNAL(clicked()),
+		this, SLOT(closeButton16_clicked()));
 }
 
 MainWindow::~MainWindow()

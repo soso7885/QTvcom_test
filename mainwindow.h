@@ -24,6 +24,14 @@
 #define COM6	6
 #define COM7	7
 #define COM8	8
+#define COM9	9
+#define COM10	10
+#define COM11	11
+#define COM12	12
+#define COM13	13
+#define COM14	14
+#define COM15	15
+#define COM16	16
 
 #define TXDATALEN		1024
 #define WRITEWAITTIME	1000
@@ -132,6 +140,30 @@ private slots:
 
 	void startButton8_clicked(void);
 	void closeButton8_clicked(void);
+
+	void startButton9_clicked(void);
+	void closeButton9_clicked(void);
+
+	void startButton10_clicked(void);
+	void closeButton10_clicked(void);
+
+	void startButton11_clicked(void);
+	void closeButton11_clicked(void);
+
+	void startButton12_clicked(void);
+	void closeButton12_clicked(void);
+
+	void startButton13_clicked(void);
+	void closeButton13_clicked(void);
+
+	void startButton14_clicked(void);
+	void closeButton14_clicked(void);
+
+	void startButton15_clicked(void);
+	void closeButton15_clicked(void);
+
+	void startButton16_clicked(void);
+	void closeButton16_clicked(void);
 
 public slots:
 	void openPortUpdate(int com);

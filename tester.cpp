@@ -6,7 +6,6 @@ Tester::Tester(Ui::MainWindow *ui, int com) :
 {     
 	this->com = com;  
 	this->ui = ui;
-//	this->test = 1;
 }   
 
 Tester::~Tester(void)                                
