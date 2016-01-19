@@ -132,7 +132,7 @@ MainWindow::~MainWindow()
  
 void MainWindow::initTester(int com)
 {
-	ui->statusBar->showMessage(QString("Opening COM%1 ..."), arg(com));
+	ui->statusBar->showMessage(QString("Opening COM%1 ..."). arg(com));
 
 	QThread *thread = new QThread;			// new a QThread 
 	Tester *tester = new Tester(ui, com);	// new Tester
