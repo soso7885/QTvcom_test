@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>714</height>
+    <width>878</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -622,8 +622,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
-     <height>22</height>
+     <width>878</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -651,8 +651,10 @@
    </property>
    <property name="font">
     <font>
-     <family>Symbol</family>
-     <pointsize>10</pointsize>
+     <family>URW Gothic L</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="features">
@@ -688,8 +690,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -698,18 +700,16 @@
         <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>10</pointsize>
+           <family>Andale Mono</family>
            <weight>50</weight>
-           <italic>false</italic>
            <bold>false</bold>
           </font>
          </property>
@@ -720,21 +720,23 @@
         <widget class="QComboBox" name="comboBox1">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
+           <width>71</width>
            <height>26</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -840,16 +842,18 @@
         <widget class="QLabel" name="label_2">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
          </property>
          <property name="frameShape">
@@ -865,20 +869,27 @@
         <widget class="QLineEdit" name="comName1">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>27</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Comic Sans MS</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton1">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -897,10 +908,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -925,8 +936,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -935,10 +946,10 @@
         <widget class="QPushButton" name="startButton2">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -963,10 +974,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -988,15 +999,15 @@
         <widget class="QLabel" name="label_3">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
-           <height>13</height>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -1010,20 +1021,20 @@
         <widget class="QComboBox" name="comboBox2">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -1129,15 +1140,15 @@
         <widget class="QLabel" name="label_4">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1151,16 +1162,16 @@
         <widget class="QLineEdit" name="comName2">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
@@ -1170,8 +1181,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1180,15 +1191,15 @@
         <widget class="QLabel" name="label_5">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -1202,21 +1213,21 @@
         <widget class="QComboBox" name="comboBox3">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -1322,15 +1333,15 @@
         <widget class="QLabel" name="label_6">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1344,26 +1355,26 @@
         <widget class="QLineEdit" name="comName3">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton3">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1388,10 +1399,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1416,8 +1427,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1426,15 +1437,15 @@
         <widget class="QLabel" name="label_7">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>47</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -1448,21 +1459,21 @@
         <widget class="QComboBox" name="comboBox4">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>American Typewriter</family>
-           <pointsize>13</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -1568,15 +1579,15 @@
         <widget class="QLabel" name="label_8">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1590,20 +1601,25 @@
         <widget class="QLineEdit" name="comName4">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Comic Sans MS</family>
+          </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton4">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1628,10 +1644,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1656,8 +1672,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1666,15 +1682,15 @@
         <widget class="QLabel" name="label_9">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -1688,21 +1704,21 @@
         <widget class="QComboBox" name="comboBox5">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -1808,15 +1824,15 @@
         <widget class="QLabel" name="label_10">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1830,26 +1846,26 @@
         <widget class="QLineEdit" name="comName5">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton5">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1874,10 +1890,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -1902,8 +1918,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -1912,15 +1928,15 @@
         <widget class="QLabel" name="label_11">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -1934,21 +1950,21 @@
         <widget class="QComboBox" name="comboBox6">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -2054,15 +2070,15 @@
         <widget class="QLabel" name="label_12">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -2076,26 +2092,26 @@
         <widget class="QLineEdit" name="comName6">
          <property name="geometry">
           <rect>
-           <x>101</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton6">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2120,10 +2136,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>114</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>117</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2148,8 +2164,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -2158,15 +2174,15 @@
         <widget class="QLabel" name="label_13">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>47</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -2180,21 +2196,21 @@
         <widget class="QComboBox" name="comboBox7">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>American Typewriter</family>
-           <pointsize>13</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -2300,15 +2316,15 @@
         <widget class="QLabel" name="label_14">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>78</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -2322,20 +2338,25 @@
         <widget class="QLineEdit" name="comName7">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Comic Sans MS</family>
+          </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton7">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2360,10 +2381,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>117</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2388,8 +2409,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -2398,15 +2419,15 @@
         <widget class="QLabel" name="label_15">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -2420,20 +2441,20 @@
         <widget class="QComboBox" name="comboBox8">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -2539,15 +2560,15 @@
         <widget class="QLabel" name="label_16">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -2561,26 +2582,26 @@
         <widget class="QLineEdit" name="comName8">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton8">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2605,10 +2626,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2633,8 +2654,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -2643,15 +2664,15 @@
         <widget class="QLabel" name="label_17">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -2665,21 +2686,21 @@
         <widget class="QComboBox" name="comboBox9">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -2785,15 +2806,15 @@
         <widget class="QLabel" name="label_18">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -2807,26 +2828,26 @@
         <widget class="QLineEdit" name="comName9">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton9">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2851,10 +2872,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -2879,8 +2900,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -2889,19 +2910,15 @@
         <widget class="QLabel" name="label_19">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
+           <family>Andale Mono</family>
           </font>
          </property>
          <property name="text">
@@ -2911,21 +2928,21 @@
         <widget class="QComboBox" name="comboBox10">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -3031,15 +3048,15 @@
         <widget class="QLabel" name="label_20">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -3053,26 +3070,26 @@
         <widget class="QLineEdit" name="comName10">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton9_2">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3097,10 +3114,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3125,8 +3142,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -3135,21 +3152,21 @@
         <widget class="QComboBox" name="comboBox11">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -3255,15 +3272,15 @@
         <widget class="QLabel" name="label_22">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -3277,26 +3294,26 @@
         <widget class="QLineEdit" name="comName11">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton11">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3321,10 +3338,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3346,15 +3363,15 @@
         <widget class="QLabel" name="label_21">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -3371,8 +3388,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -3381,15 +3398,15 @@
         <widget class="QLabel" name="label_23">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -3403,21 +3420,21 @@
         <widget class="QComboBox" name="comboBox12">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -3523,15 +3540,15 @@
         <widget class="QLabel" name="label_24">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -3545,26 +3562,26 @@
         <widget class="QLineEdit" name="comName12">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton12">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3589,10 +3606,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3617,8 +3634,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -3627,15 +3644,15 @@
         <widget class="QLabel" name="label_25">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -3649,21 +3666,21 @@
         <widget class="QComboBox" name="comboBox13">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -3769,15 +3786,15 @@
         <widget class="QLabel" name="label_26">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -3791,26 +3808,26 @@
         <widget class="QLineEdit" name="comName13">
          <property name="geometry">
           <rect>
-           <x>101</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton13">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3835,10 +3852,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>106</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>117</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -3863,8 +3880,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -3873,15 +3890,15 @@
         <widget class="QLabel" name="label_27">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -3895,21 +3912,21 @@
         <widget class="QComboBox" name="comboBox14">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -4015,15 +4032,15 @@
         <widget class="QLabel" name="label_28">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -4037,26 +4054,26 @@
         <widget class="QLineEdit" name="comName14">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton14">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -4081,10 +4098,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -4109,8 +4126,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -4119,15 +4136,15 @@
         <widget class="QLabel" name="label_29">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -4141,21 +4158,21 @@
         <widget class="QComboBox" name="comboBox15">
          <property name="geometry">
           <rect>
-           <x>101</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -4261,15 +4278,15 @@
         <widget class="QLabel" name="label_30">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>85</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -4283,26 +4300,26 @@
         <widget class="QLineEdit" name="comName15">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton15">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -4327,10 +4344,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>117</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -4355,8 +4372,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>439</width>
-          <height>76</height>
+          <width>445</width>
+          <height>127</height>
          </rect>
         </property>
         <attribute name="label">
@@ -4365,15 +4382,15 @@
         <widget class="QLabel" name="label_31">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>2</y>
-           <width>85</width>
+           <x>9</x>
+           <y>5</y>
+           <width>71</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -4387,21 +4404,21 @@
         <widget class="QComboBox" name="comboBox16">
          <property name="geometry">
           <rect>
-           <x>100</x>
+           <x>117</x>
            <y>0</y>
-           <width>104</width>
-           <height>26</height>
+           <width>77</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
            <italic>false</italic>
           </font>
          </property>
          <property name="currentText">
-          <string>50</string>
+          <string>9600</string>
          </property>
          <item>
           <property name="text">
@@ -4507,15 +4524,15 @@
         <widget class="QLabel" name="label_32">
          <property name="geometry">
           <rect>
-           <x>12</x>
-           <y>32</y>
-           <width>90</width>
+           <x>9</x>
+           <y>45</y>
+           <width>102</width>
            <height>16</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
+           <family>Andale Mono</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -4529,26 +4546,26 @@
         <widget class="QLineEdit" name="comName16">
          <property name="geometry">
           <rect>
-           <x>104</x>
-           <y>32</y>
-           <width>108</width>
-           <height>21</height>
+           <x>117</x>
+           <y>40</y>
+           <width>146</width>
+           <height>29</height>
           </rect>
          </property>
          <property name="font">
           <font>
-           <family>Futura</family>
-           <pointsize>11</pointsize>
+           <family>Comic Sans MS</family>
+           <pointsize>10</pointsize>
           </font>
          </property>
         </widget>
         <widget class="QPushButton" name="startButton16">
          <property name="geometry">
           <rect>
-           <x>6</x>
-           <y>73</y>
-           <width>66</width>
-           <height>25</height>
+           <x>9</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
@@ -4572,10 +4589,10 @@
          </property>
          <property name="geometry">
           <rect>
-           <x>98</x>
-           <y>73</y>
-           <width>70</width>
-           <height>25</height>
+           <x>100</x>
+           <y>90</y>
+           <width>85</width>
+           <height>27</height>
           </rect>
          </property>
          <property name="font">
