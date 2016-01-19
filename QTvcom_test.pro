@@ -21,3 +21,4 @@ SOURCES +=  main.cpp            \
             result_disp.cpp     \
             port_behavior.cpp   \
 			tester.cpp			\
+			reconn_test.cpp		\

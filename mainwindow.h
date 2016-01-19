@@ -12,9 +12,8 @@
 #include <QTreeWidgetItem>
 #include <QThread>
 #include <QVector>
-#include <QDebug>
+//#include <QDebug>
 #include <QBrush>
-#include <stdio.h>
 
 #define COM1	1
 #define COM2	2
@@ -33,9 +32,40 @@
 #define COM15	15
 #define COM16	16
 
+#define SIMPLE_TEST	17
+#define RECONN_TEST	18
+
 #define TXDATALEN		1024
 #define WRITEWAITTIME	1000
 #define READWAITTIME	1000
+
+#define err1(head)			\
+	do{	QString *err = new QString;			\
+		*err = head;						\
+		err->append(serial.errorString());	\
+		qDebug() << *err;					\
+		emit errUpdate(com, *err);			\
+		delete err;	}while(0);
+
+#define err2(head, round)	\
+	do{	QString *err = new QString;				\
+		*err = head;							\
+		err->append(QString::number(round));\
+		qDebug() << *err;					\
+		emit errUpdate(com, *err);			\
+		delete err; }while(0);
+
+#define ERRMSG_OVRLD(_1, _2, func, ...)		func
+
+/*
+ * WARNING !!
+ * <Request>
+ * 	Only the member of Tester can use it
+ * <HowToUse>
+ *	argument count == 1, means read/write failed,
+ *	argument count == 2, means data wrong
+*/
+#define SERIAL_CREATE_ERRMSG(args...)	ERRMSG_OVRLD(args, err2, err1)(args)
 
 namespace Ui{
 	class MainWindow;
@@ -44,6 +74,7 @@ namespace Ui{
 struct port_info{
 	QString name;
 	int BaudRate;
+	int testMode;
 };
 
 struct testResult{
@@ -77,6 +108,7 @@ public:
 	bool isRunning;
 
 	void simpleTest(void);
+	void reconnTest(void);
 
 public slots:
 	void startTest(void);

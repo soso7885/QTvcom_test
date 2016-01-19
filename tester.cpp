@@ -1,4 +1,4 @@
-#include "mainwindow.h"                                                                                                                                                               
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
                                         
 Tester::Tester(Ui::MainWindow *ui, int com) :
@@ -20,7 +20,14 @@ void Tester::startTest(void)
 	}else{
 		emit openUpdate(com);
 		/* Start VCOM test */
-		simpleTest();
+		if(pInfo.testMode == SIMPLE_TEST){
+			simpleTest();
+		}else if(pInfo.testMode == RECONN_TEST){
+			reconnTest();
+		}else{
+			qDebug("Test mode select WRONG !!");
+			return;
+		}
 	}
 }
 
