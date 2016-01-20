@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
-
 	/* COM1 button connect*/
 	connect(ui->startButton1, SIGNAL(clicked()), 
 		this, SLOT(startButton1_clicked()));
@@ -152,7 +151,7 @@ void MainWindow::initTester(int com)
 					SLOT(resPortUpdate(struct testResult*, int)));
 	
 	/* Button switch */
-	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonSwitch(int, bool)));
+	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonHandle(int, bool)));
 	
 	/* Open Port error signal */
 	connect(tester, SIGNAL(openErrUpdate(QString)), this, SLOT(openPortErr(QString)));
@@ -206,81 +205,81 @@ void MainWindow::openPortErr(QString errMsg)
 
 void MainWindow::startEnable1(void)
 {
-	ui->startButton1->setEnabled(true);
+	return buttonSwitch(COM1, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable2(void)
 {
-	ui->startButton2->setEnabled(true);
+	return buttonSwitch(COM2, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable3(void)
 {
-	ui->startButton3->setEnabled(true);
+	return buttonSwitch(COM3, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable4(void)
 {
-	ui->startButton4->setEnabled(true);
+	return buttonSwitch(COM4, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable5(void)
 {
-	ui->startButton5->setEnabled(true);
+	return buttonSwitch(COM5, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable6(void)
 {
-	ui->startButton6->setEnabled(true);
+	return buttonSwitch(COM6, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable7(void)
 {
-	ui->startButton7->setEnabled(true);
+	return buttonSwitch(COM7, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable8(void)
 {
-	ui->startButton8->setEnabled(true);
+	return buttonSwitch(COM8, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable9(void)
 {
-	ui->startButton9->setEnabled(true);
+	return buttonSwitch(COM9, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable10(void)
 {
-	ui->startButton10->setEnabled(true);
+	return buttonSwitch(COM10, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable11(void)
 {
-	ui->startButton11->setEnabled(true);
+	return buttonSwitch(COM11, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable12(void)
 {
-	ui->startButton12->setEnabled(true);
+	return buttonSwitch(COM12, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable13(void)
 {
-	ui->startButton13->setEnabled(true);
+	return buttonSwitch(COM13, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable14(void)
 {
-	ui->startButton14->setEnabled(true);
+	return buttonSwitch(COM14, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable15(void)
 {
-	ui->startButton15->setEnabled(true);
+	return buttonSwitch(COM15, BUTTON_ENABLE);
 }
 
 void MainWindow::startEnable16(void)
 {
-	ui->startButton16->setEnabled(true);
+	return buttonSwitch(COM16, BUTTON_ENABLE);
 }
 

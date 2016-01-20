@@ -22,8 +22,10 @@ void Tester::startTest(void)
 		/* Start VCOM test */
 		if(pInfo.testMode == SIMPLE_TEST){
 			simpleTest();
-		}else if(pInfo.testMode == RECONN_TEST){
-			reconnTest();
+		}else if(pInfo.testMode == OPENCLOSE_TEST){
+			openCloseTest();
+		}else if(pInfo.testMode == PACKBYCHAR_TEST){
+			packByCharTest();
 		}else{
 			qDebug("Test mode select WRONG !!");
 			return;

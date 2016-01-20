@@ -11,6 +11,14 @@ QT += widgets
 QT += gui
 QT += serialport
 
+#######################
+#
+# QT_NO_DEBUG_OUTPUT
+# with no qDebug output
+#
+########################
+#DEFINES += QT_NO_DEBUG_OUTPUT
+
 # Input
 HEADERS += mainwindow.h
 FORMS += mainwindow.ui
@@ -21,4 +29,5 @@ SOURCES +=  main.cpp            \
             result_disp.cpp     \
             port_behavior.cpp   \
 			tester.cpp			\
-			reconn_test.cpp		\
+			open_close_test.cpp		\
+			pack_by_char_test.cpp	\

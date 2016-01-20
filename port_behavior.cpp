@@ -9,9 +9,14 @@ int detectTestMode(QString testmode, struct port_info *pInfo)
 		qDebug("Select Simple test");
 		return 0;
 	}else if(QString::compare(testmode, 
-			QString("Reconnect test")) == 0){
-		pInfo->testMode = RECONN_TEST;
-		qDebug("Select Reconnect test");
+			QString("Open-Close test")) == 0){
+		pInfo->testMode = OPENCLOSE_TEST;
+		qDebug("Select Open-Close test");
+		return 0;
+	}else if(QString::compare(testmode,
+			QString("Pack by char test")) == 0){
+		pInfo->testMode = PACKBYCHAR_TEST;
+		qDebug("Select Pack by char test");
 		return 0;
 	}
 	qDebug("Error ! no such test mode");
@@ -133,8 +138,8 @@ int Tester::takePortInfo(void)
 			break;
 		case COM13:
 			pInfo.BaudRate = ui->baudRate13->currentText().toInt();
-			tmp = ui->test13->currentText();
 			pInfo.name = ui->comName13->text();
+			tmp = ui->test13->currentText();
 			if(detectTestMode(tmp, &pInfo) == -1){
 				return -1;
 			}
@@ -171,7 +176,6 @@ int Tester::takePortInfo(void)
 			qDebug("ERROR ! No such ComPort %d", com);
 			return -1;
 	}
-	
 	return 0;
 }
 

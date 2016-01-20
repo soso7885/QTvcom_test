@@ -12,7 +12,7 @@
 #include <QTreeWidgetItem>
 #include <QThread>
 #include <QVector>
-//#include <QDebug>
+#include <QDebug>
 #include <QBrush>
 
 #define COM1	1
@@ -33,11 +33,17 @@
 #define COM16	16
 
 #define SIMPLE_TEST	17
-#define RECONN_TEST	18
+#define OPENCLOSE_TEST	18
+#define QFREESIZE_TEST	19
+#define PACKBYCHAR_TEST	20
 
-#define TXDATALEN		1024
-#define WRITEWAITTIME	1000
-#define READWAITTIME	1000
+#define BUTTON_DISABLE	0
+#define BUTTON_ENABLE	1
+
+#define TXDATALEN			1024
+#define TXDATALEN_IN_PACK	256
+#define WRITEWAITTIME		1000
+#define READWAITTIME		1000
 
 #define err1(head)			\
 	do{	QString *err = new QString;			\
@@ -75,6 +81,7 @@ struct port_info{
 	QString name;
 	int BaudRate;
 	int testMode;
+	unsigned char ec;
 };
 
 struct testResult{
@@ -82,6 +89,7 @@ struct testResult{
 	qint64 rxlen;
 	int round;
 	int err;
+	int ecerr;
 };
 
 /*------------------------------------------------*/
@@ -102,13 +110,15 @@ private:
 
 public:
 	explicit Tester(Ui::MainWindow *ui, int com);
-	~Tester(void);
-	
+	~Tester(void);	
 	/* Main thread will use it to close child thread */
 	bool isRunning;
 
+	/* Test function */
 	void simpleTest(void);
-	void reconnTest(void);
+	void openCloseTest(void);
+	void qfSizeTest(void);
+	void packByCharTest(void);
 
 public slots:
 	void startTest(void);
@@ -138,6 +148,8 @@ private:
 
 	void initTester(int com);
 	void closeTester(int com);
+
+	void buttonSwitch(int com, bool able);
 
 public:
 	explicit MainWindow(QWidget *parent = 0);
@@ -222,7 +234,7 @@ public slots:
 	void errPortUpdate(int com, QString errMsg);
 	void resPortUpdate(struct testResult *tRes, int com);
 
-	void buttonSwitch(int com, bool able);
+	void buttonHandle(int com, bool able);
 
 	void openPortErr(QString errMsg);
 };

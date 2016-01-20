@@ -24,6 +24,8 @@ void Tester::simpleTest(void)
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
+	tRes.err = 0;
+	tRes.ecerr = 0;
 	isRunning = 1;
 	/* Initial End */
 	do{
@@ -60,7 +62,7 @@ void Tester::simpleTest(void)
 				break;
 			}
 			/* Data compare */
-			res = memcmp(rxbuf.data(), txbuf.data(), TXDATALEN);
+			res = QString::compare(rxbuf, txbuf);
 			if(res){
 				SERIAL_CREATE_ERRMSG("Data incorrect, round: ", tRes.round);
 			}

@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-void Tester::reconnTest(void)
+void Tester::openCloseTest(void)
 {
 	int i;
 	int res = 0;
@@ -26,6 +26,8 @@ void Tester::reconnTest(void)
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
+	tRes.err = 0;
+	tRes.ecerr = 0;
 	isRunning = 1;
 	/* Initial End */
 	
@@ -79,7 +81,7 @@ void Tester::reconnTest(void)
 				break;
 			}
 			/* Data compare */
-			res = memcmp(rxbuf.data(), txbuf.data(), TXDATALEN);
+			res = QString::compare(rxbuf, txbuf);
 			if(res){
 				SERIAL_CREATE_ERRMSG("Data incorrect, round: ", tRes.round);
 			}
@@ -102,6 +104,7 @@ void Tester::reconnTest(void)
 		}
 		/* sleep 1 sec */
 		QThread::currentThread()->sleep(1);
+
 	}while(isRunning);
 
 	emit closeUpdate(com);

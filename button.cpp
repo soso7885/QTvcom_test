@@ -231,7 +231,12 @@ void MainWindow::buttonSwitch(int com, bool able)
 		default:
 			qDebug() << "ERROR, no such ComPort" << com;
 	}
-}   
+}  
+
+void MainWindow::buttonHandle(int com, bool able)
+{
+	return buttonSwitch(com, able);
+} 
 
 
 
