@@ -70,13 +70,13 @@ void Tester::simpleTest(void)
 		}
 
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
-			tRes.round++;
 			qDebug("Com %d, Round %d", com, tRes.round);
 			if(!res){
 				emit OKUpdate(com);
 			}
 		}
 		emit resUpdate(&tRes, com);
+		tRes.round++;
 	}while(isRunning);
 	
 	emit closeUpdate(com);

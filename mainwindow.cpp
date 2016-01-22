@@ -1,133 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
-MainWindow::MainWindow(QWidget *parent) :
-	QMainWindow(parent),
-	ui(new Ui::MainWindow)
-{
-	ui->setupUi(this);
-	/* COM1 button connect*/
-	connect(ui->startButton1, SIGNAL(clicked()), 
-		this, SLOT(startButton1_clicked()));
-	connect(ui->closeButton1, SIGNAL(clicked()), 
-		this, SLOT(closeButton1_clicked()));
-	/* COM2 button connect*/
-	connect(ui->startButton2, SIGNAL(clicked()),
-		this, SLOT(startButton2_clicked()));
-	connect(ui->closeButton2, SIGNAL(clicked()),
-		this, SLOT(closeButton2_clicked()));
-	/* COM3 button connect */
-	connect(ui->startButton3, SIGNAL(clicked()),
-		this, SLOT(startButton3_clicked()));
-	connect(ui->closeButton3, SIGNAL(clicked()),
-		this, SLOT(closeButton3_clicked()));
-	/* COM4 button connect*/
-	connect(ui->startButton4, SIGNAL(clicked()),
-		this, SLOT(startButton4_clicked()));
-	connect(ui->closeButton4, SIGNAL(clicked()),
-		this, SLOT(closeButton4_clicked()));
-	/* COM5 button connect*/
-	connect(ui->startButton5, SIGNAL(clicked()),
-		this, SLOT(startButton5_clicked()));
-	connect(ui->closeButton5, SIGNAL(clicked()),
-		this, SLOT(closeButton5_clicked()));
-	/* COM6 button connect*/
-	connect(ui->startButton6, SIGNAL(clicked()),
-		this, SLOT(startButton6_clicked()));
-	connect(ui->closeButton6, SIGNAL(clicked()),
-		this, SLOT(closeButton6_clicked()));
-	/* COM7 button connect*/
-	connect(ui->startButton7, SIGNAL(clicked()),
-		this, SLOT(startButton7_clicked()));
-	connect(ui->closeButton7, SIGNAL(clicked()),
-		this, SLOT(closeButton7_clicked()));
-	/* COM8 button connect*/
-	connect(ui->startButton8, SIGNAL(clicked()),
-		this, SLOT(startButton8_clicked()));
-	connect(ui->closeButton8, SIGNAL(clicked()),
-		this, SLOT(closeButton8_clicked()));
-	/* COM9 button connect*/
-	connect(ui->startButton9, SIGNAL(clicked()),
-		this, SLOT(startButton9_clicked()));
-	connect(ui->closeButton9, SIGNAL(clicked()),
-		this, SLOT(closeButton9_clicked()));
-	/* COM10 button connect*/
-	connect(ui->startButton10, SIGNAL(clicked()),
-		this, SLOT(startButton10_clicked()));
-	connect(ui->closeButton10, SIGNAL(clicked()),
-		this, SLOT(closeButton10_clicked()));
-	/* COM11 button connect*/
-	connect(ui->startButton11, SIGNAL(clicked()),
-		this, SLOT(startButton11_clicked()));
-	connect(ui->closeButton11, SIGNAL(clicked()),
-		this, SLOT(closeButton11_clicked()));
-	/* COM12 button connect*/
-	connect(ui->startButton12, SIGNAL(clicked()),
-		this, SLOT(startButton12_clicked()));
-	connect(ui->closeButton12, SIGNAL(clicked()),
-		this, SLOT(closeButton12_clicked()));
-	/* COM13 button connect*/
-	connect(ui->startButton13, SIGNAL(clicked()),
-		this, SLOT(startButton13_clicked()));
-	connect(ui->closeButton13, SIGNAL(clicked()),
-		this, SLOT(closeButton13_clicked()));
-	/* COM14 button connect*/
-	connect(ui->startButton14, SIGNAL(clicked()),
-		this, SLOT(startButton14_clicked()));
-	connect(ui->closeButton14, SIGNAL(clicked()),
-		this, SLOT(closeButton14_clicked()));
-	/* COM15 button connect*/
-	connect(ui->startButton15, SIGNAL(clicked()),
-		this, SLOT(startButton15_clicked()));
-	connect(ui->closeButton15, SIGNAL(clicked()),
-		this, SLOT(closeButton15_clicked()));
-	/* COM16 button connect*/
-	connect(ui->startButton16, SIGNAL(clicked()),
-		this, SLOT(startButton16_clicked()));
-	connect(ui->closeButton16, SIGNAL(clicked()),
-		this, SLOT(closeButton16_clicked()));
-	/*
-	 * To advoid Com port name empty
-	 * XXX: Maybe can combine with buttonSwitch
-	*/
-	connect(ui->comName1, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable1()));	
-	connect(ui->comName2, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable2()));	
-	connect(ui->comName3, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable3()));	
-	connect(ui->comName4, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable4()));	
-	connect(ui->comName5, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable5()));	
-	connect(ui->comName6, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable6()));	
-	connect(ui->comName7, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable7()));	
-	connect(ui->comName8, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable8()));	
-	connect(ui->comName9, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable9()));	
-	connect(ui->comName10, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable10()));	
-	connect(ui->comName11, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable11()));	
-	connect(ui->comName12, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable12()));	
-	connect(ui->comName13, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable13()));	
-	connect(ui->comName14, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable14()));	
-	connect(ui->comName15, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable15()));	
-	connect(ui->comName16, SIGNAL(textChanged(const QString)), 
-				this, SLOT(startEnable16()));	
-}
-
-MainWindow::~MainWindow()
-{
-	delete ui;
-}
  
 void MainWindow::initTester(int com)
 {
@@ -149,7 +21,8 @@ void MainWindow::initTester(int com)
 					SLOT(errPortUpdate(int, QString)));
 	connect(tester, SIGNAL(resUpdate(struct testResult*, int)), this, 
 					SLOT(resPortUpdate(struct testResult*, int)));
-	
+	connect(tester, SIGNAL(resUpdateInDataPack(struct testResult*, int)), this,
+					SLOT(resPortUpdateInDataPackTest(struct testResult*, int)));
 	/* Button switch */
 	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonHandle(int, bool)));
 	
@@ -197,12 +70,17 @@ void MainWindow::resPortUpdate(struct testResult *tRes, int com)
 	updateResult(tRes, com);
 }
 
+void MainWindow::resPortUpdateInDataPackTest(struct testResult *tRes, int com)
+{
+	updateResultInDataPackTest(tRes, com);
+}
+
 void MainWindow::openPortErr(QString errMsg)
 {
 	QMessageBox::critical(this, "Error", errMsg);
 	ui->statusBar->showMessage("Open Port error...");
 }
-
+/*---------------------------------------------------------*/
 void MainWindow::startEnable1(void)
 {
 	return buttonSwitch(COM1, BUTTON_ENABLE);
@@ -281,5 +159,85 @@ void MainWindow::startEnable15(void)
 void MainWindow::startEnable16(void)
 {
 	return buttonSwitch(COM16, BUTTON_ENABLE);
+}
+/*---------------------------------------------*/
+void MainWindow::checkEnableEC1(void)
+{
+	return ECediterSwitch(COM1);
+}
+
+void MainWindow::checkEnableEC2(void)
+{
+	return ECediterSwitch(COM2);
+}
+
+void MainWindow::checkEnableEC3(void)
+{
+	return ECediterSwitch(COM3);
+}
+
+void MainWindow::checkEnableEC4(void)
+{
+	return ECediterSwitch(COM4);
+}
+
+void MainWindow::checkEnableEC5(void)
+{
+	return ECediterSwitch(COM5);
+}
+
+void MainWindow::checkEnableEC6(void)
+{
+	return ECediterSwitch(COM6);
+}
+
+void MainWindow::checkEnableEC7(void)
+{
+	return ECediterSwitch(COM7);
+}
+
+void MainWindow::checkEnableEC8(void)
+{
+	return ECediterSwitch(COM8);
+}
+
+void MainWindow::checkEnableEC9(void)
+{
+	return ECediterSwitch(COM9);
+}
+
+void MainWindow::checkEnableEC10(void)
+{
+	return ECediterSwitch(COM10);
+}
+
+void MainWindow::checkEnableEC11(void)
+{
+	return ECediterSwitch(COM11);
+}
+
+void MainWindow::checkEnableEC12(void)
+{
+	return ECediterSwitch(COM12);
+}
+
+void MainWindow::checkEnableEC13(void)
+{
+	return ECediterSwitch(COM13);
+}
+
+void MainWindow::checkEnableEC14(void)
+{
+	return ECediterSwitch(COM14);
+}
+
+void MainWindow::checkEnableEC15(void)
+{
+	return ECediterSwitch(COM15);
+}
+
+void MainWindow::checkEnableEC16(void)
+{
+	return ECediterSwitch(COM16);
 }
 

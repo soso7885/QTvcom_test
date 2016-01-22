@@ -89,7 +89,6 @@ void Tester::openCloseTest(void)
 		}
 
 		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
-			tRes.round++;
 			qDebug("Com %d, Round %d", com, tRes.round);
 			if(!res){
 				emit OKUpdate(com);
@@ -101,6 +100,7 @@ void Tester::openCloseTest(void)
 				lock = 0;
 			}
 			emit resUpdate(&tRes, com);
+			tRes.round++;
 		}
 		/* sleep 1 sec */
 		QThread::currentThread()->sleep(1);

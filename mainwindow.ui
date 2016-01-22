@@ -51,7 +51,7 @@
     </column>
     <column>
      <property name="text">
-      <string>Status</string>
+      <string>Result</string>
      </property>
      <property name="font">
       <font>
@@ -62,7 +62,7 @@
     </column>
     <column>
      <property name="text">
-      <string>Result</string>
+      <string>Status</string>
      </property>
      <property name="font">
       <font>
@@ -84,9 +84,6 @@
      <property name="text">
       <string>N/A</string>
      </property>
-     <property name="text">
-      <string>N/A</string>
-     </property>
      <property name="background">
       <brush brushstyle="NoBrush">
        <color alpha="255">
@@ -95,6 +92,9 @@
         <blue>0</blue>
        </color>
       </brush>
+     </property>
+     <property name="text">
+      <string>N/A</string>
      </property>
      <property name="flags">
       <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -134,7 +134,35 @@
      </item>
      <item>
       <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -152,6 +180,12 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
@@ -177,7 +211,35 @@
      </item>
      <item>
       <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -195,20 +257,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -226,20 +334,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -257,20 +411,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -288,20 +488,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -319,20 +565,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -350,20 +642,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -381,20 +719,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -412,20 +796,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -443,20 +873,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -474,20 +950,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -505,20 +1027,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -536,20 +1104,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -567,20 +1181,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -598,20 +1258,66 @@
       <property name="text">
        <string>Round</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Write byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Read byte</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Err byte </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E-C err byte</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Error</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </item>
     </item>
@@ -944,7 +1650,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>137</width>
+           <width>155</width>
            <height>29</height>
           </rect>
          </property>
@@ -971,7 +1677,7 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
         </widget>
@@ -982,7 +1688,7 @@
          <property name="geometry">
           <rect>
            <x>350</x>
-           <y>46</y>
+           <y>45</y>
            <width>41</width>
            <height>27</height>
           </rect>
@@ -1291,7 +1997,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -1313,9 +2019,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage3">
@@ -1571,7 +2340,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -1593,9 +2362,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage4">
@@ -1850,7 +2682,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -1872,9 +2704,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage5">
@@ -2130,7 +3025,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -2152,9 +3047,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage6">
@@ -2410,7 +3368,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -2432,9 +3390,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage7">
@@ -2689,7 +3710,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -2711,9 +3732,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage8">
@@ -2968,7 +4052,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -2990,9 +4074,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage9">
@@ -3248,7 +4395,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -3270,9 +4417,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="hexButton9">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton9">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit9">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage10">
@@ -3524,7 +4734,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -3546,9 +4756,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit10">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton10">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton10">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage11">
@@ -3804,7 +5077,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -3828,9 +5101,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="hexButton11">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton11">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit11">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage12">
@@ -4086,7 +5422,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -4108,9 +5444,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit12">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton12">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton12">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage13">
@@ -4366,7 +5765,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -4388,9 +5787,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="hexButton13">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton13">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit13">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage14">
@@ -4646,7 +6108,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -4668,9 +6130,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton14">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton14">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit14">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage15">
@@ -4926,7 +6451,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -4948,9 +6473,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton15">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton15">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit15">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="toolBoxPage16">
@@ -5205,7 +6793,7 @@
           <rect>
            <x>270</x>
            <y>0</y>
-           <width>146</width>
+           <width>155</width>
            <height>30</height>
           </rect>
          </property>
@@ -5227,9 +6815,72 @@
          </item>
          <item>
           <property name="text">
-           <string>Pack by char test</string>
+           <string>Pack by character test</string>
           </property>
          </item>
+        </widget>
+        <widget class="QRadioButton" name="ascIIButton16">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>40</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="hexButton16">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>60</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Andale Mono</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>hex</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ecLineEdit16">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>45</y>
+           <width>41</width>
+           <height>27</height>
+          </rect>
+         </property>
         </widget>
        </widget>
       </widget>

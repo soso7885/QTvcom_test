@@ -7,6 +7,8 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QTextStream>
+#include <QRadioButton>
+#include <QComboBox>
 #include <QString>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
@@ -37,11 +39,21 @@
 #define QFREESIZE_TEST	19
 #define PACKBYCHAR_TEST	20
 
-#define BUTTON_DISABLE	0
-#define BUTTON_ENABLE	1
+#define SIMPLE		"Simple test"
+#define OPENCLOSE	"Open-Close test"
+#define QFSIZE		"Qfree size test"
+#define PACKBYCHAR	"Pack by character test"
+
+#define ASCII	0
+#define HEXADECIMA	1
+
+#define BUTTON_DISABLE	false
+#define BUTTON_ENABLE	true
 
 #define TXDATALEN			1024
-#define TXDATALEN_IN_PACK	256
+#define HEX_TXDATALEN		256
+#define ASCII_TXDATALEN		94
+
 #define WRITEWAITTIME		1000
 #define READWAITTIME		1000
 
@@ -54,8 +66,8 @@
 		delete err;	}while(0);
 
 #define err2(head, round)	\
-	do{	QString *err = new QString;				\
-		*err = head;							\
+	do{	QString *err = new QString;			\
+		*err = head;						\
 		err->append(QString::number(round));\
 		qDebug() << *err;					\
 		emit errUpdate(com, *err);			\
@@ -81,6 +93,7 @@ struct port_info{
 	QString name;
 	int BaudRate;
 	int testMode;
+	bool ecTestMode;	// ASCII/hex
 	unsigned char ec;
 };
 
@@ -102,6 +115,13 @@ private:
 	struct port_info pInfo;
 	QSerialPort serial;
 	int com;	// To decide which ComPort is running
+	
+	QLineEdit *ui_comPortName;
+	QComboBox *ui_baudRate;
+	QComboBox *ui_testMod;
+	QRadioButton *ui_ascIIButton;
+	QRadioButton *ui_hexButton;
+	QLineEdit *ui_ecEditer;
 
 	int openSerialPort(void);
 	void closeSerialPort(void);
@@ -132,6 +152,7 @@ signals:
 	void OKUpdate(int com);
 	void errUpdate(int com, QString errMsg);
 	void resUpdate(struct testResult *tRes, int com);
+	void resUpdateInDataPack(struct testResult *tRes, int com);
 	
 	void buttonUpdate(int com, bool able);
 	void openErrUpdate(QString errMsg);
@@ -144,12 +165,20 @@ class MainWindow : public QMainWindow
 
 private:
 	Ui::MainWindow *ui;
+
 	Tester *testerVect[16];
+
+	QPushButton *startButton[16];
+	QComboBox *testMod[16];
+	QRadioButton *ascIIButton[16];
+	QRadioButton *hexButton[16];
+	QLineEdit *ecLineEdit[16];
 
 	void initTester(int com);
 	void closeTester(int com);
 
 	void buttonSwitch(int com, bool able);
+	void ECediterSwitch(int com);
 
 public:
 	explicit MainWindow(QWidget *parent = 0);
@@ -160,6 +189,7 @@ public:
 	void portOKStatus(int com);
 	void portErrStatus(int com, QString errMsg);
 	void updateResult(struct testResult *tRes, int com);
+	void updateResultInDataPackTest(struct testResult *tRes, int com);
 
 private slots:
 	void startButton1_clicked(void);
@@ -226,6 +256,23 @@ private slots:
 	void startEnable14(void);
 	void startEnable15(void);
 	void startEnable16(void);
+	/* To wakeup EndChar editer */
+	void checkEnableEC1(void);
+	void checkEnableEC2(void);
+	void checkEnableEC3(void);
+	void checkEnableEC4(void);
+	void checkEnableEC5(void);
+	void checkEnableEC6(void);
+	void checkEnableEC7(void);
+	void checkEnableEC8(void);
+	void checkEnableEC9(void);
+	void checkEnableEC10(void);
+	void checkEnableEC11(void);
+	void checkEnableEC12(void);
+	void checkEnableEC13(void);
+	void checkEnableEC14(void);
+	void checkEnableEC15(void);
+	void checkEnableEC16(void);
 
 public slots:
 	void openPortUpdate(int com);
@@ -233,6 +280,7 @@ public slots:
 	void OKPortUpdate(int com);
 	void errPortUpdate(int com, QString errMsg);
 	void resPortUpdate(struct testResult *tRes, int com);
+	void resPortUpdateInDataPackTest(struct testResult *tRes, int com);
 
 	void buttonHandle(int com, bool able);
 

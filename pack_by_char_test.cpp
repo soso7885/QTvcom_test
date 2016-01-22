@@ -1,46 +1,86 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-QString compareData(QByteArray rxbuf, struct testResult *tRes, 
-				unsigned char ec)
+void compareData(QByteArray rxbuf, struct testResult *tRes, 
+				struct port_info *pInfo, char *err)
 {
 	int i;
-	QString err;
+	unsigned char ec = pInfo->ec;
 	
-	for(i = 0; i < rxbuf.size(); i++){
+	for(i = 0; i < rxbuf.size()-1; i++){
 		if(qAbs((unsigned char)rxbuf.at(i+1) - 
-			(unsigned char )rxbuf.at(i)) != 1
-			&& (unsigned char)rxbuf.at(i) != TXDATALEN_IN_PACK-1){
-			tRes->err++;
-			err = "Data error\n";
-			printf("%x | %x\n", (unsigned char)rxbuf.at(i+1),
-								(unsigned char)rxbuf.at(i));
-			return err;
+			(unsigned char )rxbuf.at(i)) != 1){
+			if(pInfo->ecTestMode == ASCII){
+				/* 
+				 * In ASCII mode, 
+				 * don't check the last of 
+				 * haracter in testing string '~' 
+				*/
+				if((unsigned char)rxbuf.at(i) != '~'){
+					sprintf(err, "Data mess:\n(%d)<%c , %c>", i, rxbuf.at(i), rxbuf.at(i+1));
+					tRes->err++;
+					return;
+				}
+			}else{
+				/*
+				 * In HEX mode,
+				 * don't check the 
+				 * last of testing number
+				*/
+				if((unsigned char)rxbuf.at(i) != 255){
+					sprintf(err, "Data mess:\n(%d)<%#02x , %#02x>", i,
+							(unsigned char)rxbuf.at(i),(unsigned char)rxbuf.at(i+1));
+					tRes->err++;
+					return;
+				}
+			}
 		}
 	}
 	
 	if((unsigned char)rxbuf.at(rxbuf.size()-1) != ec){
+		if(pInfo->ecTestMode == ASCII){		// ASCII
+			sprintf(err, "End char err\n<%c , %c>",
+			(unsigned char)rxbuf.at(rxbuf.size()-1), ec);
+		}else{	// Hex
+			sprintf(err, "End char err\n<%#02x , %#02x>",
+				(unsigned char)rxbuf.at(rxbuf.size()-1), ec);
+		}
 		tRes->ecerr++;
-		err = "End char error\n";
-		return err; 
+		
+		return;
 	}
 	
-	return "";
+	memset(err, 0, 32);
 }
 
 void Tester::packByCharTest(void)
 {
 	int i;
 	struct testResult tRes;
-	QString err;
+	char err[32];
+	char *res;
 	QByteArray txbuf;
 	QByteArray rxbuf;
 
 	/* Initial */
-	txbuf.resize(TXDATALEN_IN_PACK);
-	for(i = 0; i < TXDATALEN_IN_PACK; i++){
-		txbuf[i] = i;
+	if(pInfo.ecTestMode == ASCII){	// ASCII
+		txbuf.resize(ASCII_TXDATALEN);
+		for(i = 0; i < ASCII_TXDATALEN; i++){
+			if(i == 0){
+				txbuf[i] = '!';
+			}else{
+				txbuf[i] = txbuf[i-1] + 1;
+			}
+		}
 	}
+	
+	if(pInfo.ecTestMode == HEXADECIMA){	// HEX
+		txbuf.resize(HEX_TXDATALEN);
+		for(i = 0; i < HEX_TXDATALEN; i++){
+			txbuf[i] = i;
+		}
+	}
+
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
 	tRes.round = 0;
@@ -57,7 +97,6 @@ void Tester::packByCharTest(void)
 				break;
 			}
 			if(tRes.txlen != txbuf.size()){
-				qDebug() << "txlen" << tRes.txlen << "!= 1024";
 				continue;
 			}
 			if(!serial.waitForBytesWritten(WRITEWAITTIME)){
@@ -81,27 +120,24 @@ void Tester::packByCharTest(void)
 				SERIAL_CREATE_ERRMSG("Read timeout:\n");
 				break;
 			}
+			
 			/* Data compare */
-		//	err = compareData(rxbuf, &tRes, pInfo.ec);
-			err = compareData(rxbuf, &tRes, 0xf1);
-			if(!err.isEmpty()){
-				qDebug()<<err;
-				SERIAL_CREATE_ERRMSG("Data incorrect, round: ", tRes.round);
+			compareData(rxbuf, &tRes, &pInfo, err);
+			res = err;
+			if(*res != 0){
+				SERIAL_CREATE_ERRMSG(res, tRes.round);
 			}
 			tRes.rxlen = rxbuf.size();
 		}
 
-		if(tRes.txlen == TXDATALEN_IN_PACK){
-			tRes.round++;
+		if(rxbuf.size() > 0){
 			qDebug("Com %d, Round %d", com, tRes.round);
-			if(err.isEmpty()){
+			if(*res == 0){
 				emit OKUpdate(com);
 			}
-			emit resUpdate(&tRes, com);
+			emit resUpdateInDataPack(&tRes, com);
+			tRes.round++;
 		}
-		/* sleep 1 sec */
-		QThread::currentThread()->sleep(1);
-
 	}while(isRunning);
 
 	emit closeUpdate(com);

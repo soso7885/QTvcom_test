@@ -17,12 +17,13 @@ QT += serialport
 # with no qDebug output
 #
 ########################
-#DEFINES += QT_NO_DEBUG_OUTPUT
+DEFINES += QT_NO_DEBUG_OUTPUT
 
 # Input
 HEADERS += mainwindow.h
 FORMS += mainwindow.ui
 SOURCES +=  main.cpp            \
+			mainwindow_init.cpp	\
             mainwindow.cpp      \
             simpletest.cpp      \
 			button.cpp			\
