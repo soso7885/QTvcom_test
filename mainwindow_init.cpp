@@ -242,6 +242,12 @@ MainWindow::MainWindow(QWidget *parent) :
 	ecLineEdit[13] = ui->ecLineEdit14;
 	ecLineEdit[14] = ui->ecLineEdit15;
 	ecLineEdit[15] = ui->ecLineEdit16;
+	
+	/* To advoid double click `close` button lead to crush */
+	int i;
+	for(i = 0; i < MAXPORT; i++){
+		testerVect[i] = NULL;
+	}
 }
 
 MainWindow::~MainWindow()

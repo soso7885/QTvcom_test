@@ -33,16 +33,19 @@
 #define COM14	14
 #define COM15	15
 #define COM16	16
+#define MAXPORT	COM16
 
 #define SIMPLE_TEST	17
 #define OPENCLOSE_TEST	18
 #define QFREESIZE_TEST	19
 #define PACKBYCHAR_TEST	20
+#define MCTRL_TEST		21
 
 #define SIMPLE		"Simple test"
 #define OPENCLOSE	"Open-Close test"
 #define QFSIZE		"Qfree size test"
 #define PACKBYCHAR	"Pack by character test"
+#define MCTRL		"Modem control test"
 
 #define ASCII	0
 #define HEXADECIMA	1
@@ -100,9 +103,19 @@ struct port_info{
 struct testResult{
 	qint64 txlen;
 	qint64 rxlen;
-	int round;
-	int err;
-	int ecerr;
+	unsigned int round;
+	unsigned int err;
+	unsigned int ecerr;
+};
+	
+struct mctrlResult{
+	unsigned int round;
+	bool dtr;
+	bool rts;
+	bool cts;
+	bool dcd;
+	bool dsr;
+	bool ri;
 };
 
 /*------------------------------------------------*/
@@ -139,6 +152,7 @@ public:
 	void openCloseTest(void);
 	void qfSizeTest(void);
 	void packByCharTest(void);
+	void mctrlTest(void);
 
 public slots:
 	void startTest(void);
@@ -153,6 +167,7 @@ signals:
 	void errUpdate(int com, QString errMsg);
 	void resUpdate(struct testResult *tRes, int com);
 	void resUpdateInDataPack(struct testResult *tRes, int com);
+	void mcrtrlResUpdate(struct mctrlResult *mctrlRes, int com);
 	
 	void buttonUpdate(int com, bool able);
 	void openErrUpdate(QString errMsg);
@@ -190,6 +205,7 @@ public:
 	void portErrStatus(int com, QString errMsg);
 	void updateResult(struct testResult *tRes, int com);
 	void updateResultInDataPackTest(struct testResult *tRes, int com);
+	void updateResultMctrl(struct mctrlResult *mctrlRes, int com);
 
 private slots:
 	void startButton1_clicked(void);
@@ -281,6 +297,7 @@ public slots:
 	void errPortUpdate(int com, QString errMsg);
 	void resPortUpdate(struct testResult *tRes, int com);
 	void resPortUpdateInDataPackTest(struct testResult *tRes, int com);
+	void resMctrlUpdate(struct mctrlResult *mctrlRes, int com);
 
 	void buttonHandle(int com, bool able);
 

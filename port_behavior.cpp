@@ -12,6 +12,10 @@ int detectTestMode(QString testmode, struct port_info *pInfo)
 	}else if(!QString::compare(testmode, QString(PACKBYCHAR))){
 		pInfo->testMode = PACKBYCHAR_TEST;
 		qDebug("Select Pack by character test");
+	}else if(!QString::compare(testmode, QString(MCTRL))){
+		pInfo->testMode = MCTRL_TEST;
+		qDebug("Select Modem control test");
+		/* TODO: clean another test result */
 	}else{
 		qDebug("Error ! no such test mode");
 		return -1;
@@ -30,7 +34,7 @@ int Tester::takePortInfo(void)
 	if(detectTestMode(tmp, &pInfo) == -1){
 		return -1;
 	}
-	/* if pack by char , get infomation from UI */
+	/* if pack by char , get setting E-C from UI */
 	if(pInfo.testMode == PACKBYCHAR_TEST){
 		if(ui_ascIIButton->isChecked()){
 			pInfo.ecTestMode = ASCII;

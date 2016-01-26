@@ -48,6 +48,9 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignVCenter</set>
+     </property>
     </column>
     <column>
      <property name="text">
@@ -165,6 +168,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -241,6 +279,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -319,6 +392,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -395,6 +503,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -473,6 +616,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -549,6 +727,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -627,6 +840,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -703,6 +951,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -781,6 +1064,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -857,6 +1175,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -935,6 +1288,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -1011,6 +1399,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -1089,6 +1512,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -1165,6 +1623,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
     <item>
@@ -1243,6 +1736,41 @@
        <string/>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+     </item>
     </item>
     <item>
      <property name="text">
@@ -1319,6 +1847,41 @@
       <property name="text">
        <string/>
       </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manu control</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>DTR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CTS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DCD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
      </item>
     </item>
    </widget>
@@ -1680,6 +2243,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QLineEdit" name="ecLineEdit1">
          <property name="enabled">
@@ -2020,6 +2588,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -2365,6 +2938,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="ascIIButton3">
          <property name="enabled">
@@ -2705,6 +3283,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -3050,6 +3633,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="ascIIButton5">
          <property name="enabled">
@@ -3391,6 +3979,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -3735,6 +4328,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="ascIIButton7">
          <property name="enabled">
@@ -4075,6 +4673,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -4420,6 +5023,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="hexButton9">
          <property name="enabled">
@@ -4757,6 +5365,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -5104,6 +5717,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="hexButton11">
          <property name="enabled">
@@ -5445,6 +6063,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -5790,6 +6413,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="hexButton13">
          <property name="enabled">
@@ -6131,6 +6759,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>
@@ -6476,6 +7109,11 @@
            <string>Pack by character test</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
+          </property>
+         </item>
         </widget>
         <widget class="QRadioButton" name="ascIIButton15">
          <property name="enabled">
@@ -6816,6 +7454,11 @@
          <item>
           <property name="text">
            <string>Pack by character test</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Modem control test</string>
           </property>
          </item>
         </widget>

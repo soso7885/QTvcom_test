@@ -32,3 +32,4 @@ SOURCES +=  main.cpp            \
 			tester.cpp			\
 			open_close_test.cpp		\
 			pack_by_char_test.cpp	\
+			mctrl_test.cpp		\

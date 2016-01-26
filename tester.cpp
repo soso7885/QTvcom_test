@@ -153,15 +153,22 @@ void Tester::startTest(void)
 	}else{
 		emit openUpdate(com);
 		/* Start VCOM test */
-		if(pInfo.testMode == SIMPLE_TEST){
-			simpleTest();
-		}else if(pInfo.testMode == OPENCLOSE_TEST){
-			openCloseTest();
-		}else if(pInfo.testMode == PACKBYCHAR_TEST){
-			packByCharTest();
-		}else{
-			qDebug("Test mode select WRONG !!");
-			return;
+		switch(pInfo.testMode){
+			case SIMPLE_TEST:
+				simpleTest();
+				break;
+			case OPENCLOSE_TEST:
+				openCloseTest();
+				break;
+			case PACKBYCHAR_TEST:
+				packByCharTest();
+				break;
+			case MCTRL_TEST:
+				mctrlTest();
+				break;
+			default:
+				qDebug("Test mode select WRONG !!");
+				return;
 		}
 	}
 }

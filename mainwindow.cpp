@@ -23,6 +23,8 @@ void MainWindow::initTester(int com)
 					SLOT(resPortUpdate(struct testResult*, int)));
 	connect(tester, SIGNAL(resUpdateInDataPack(struct testResult*, int)), this,
 					SLOT(resPortUpdateInDataPackTest(struct testResult*, int)));
+	connect(tester, SIGNAL(mcrtrlResUpdate(struct mctrlResult*, int)), this,
+					SLOT(resMctrlUpdate(struct mctrlResult*, int)));
 	/* Button switch */
 	connect(tester, SIGNAL(buttonUpdate(int, bool)), this, SLOT(buttonHandle(int, bool)));
 	
@@ -40,39 +42,46 @@ void MainWindow::initTester(int com)
 
 void MainWindow::closeTester(int com)
 {
-	testerVect[com-1]->isRunning = 0;
-	ui->statusBar->showMessage(QString("Closing COM%1 ...")
-								.arg(com)); 
+	if(testerVect[com-1] != NULL){
+		testerVect[com-1]->isRunning = 0;
+		ui->statusBar->showMessage(QString("Closing COM%1 ...")
+									.arg(com)); 
+	}
 }
 
 void MainWindow::openPortUpdate(int com)
 {
-	openPortStatus(com);	
+	return openPortStatus(com);	
 }
 
 void MainWindow::closePortUpdate(int com)
 {
-	closePortStatus(com);
+	return closePortStatus(com);
 }
 
 void MainWindow::OKPortUpdate(int com)
 {
-	portOKStatus(com);
+	return portOKStatus(com);
 }
 
 void MainWindow::errPortUpdate(int com, QString errMsg)
 {
-	portErrStatus(com, errMsg);
+	return portErrStatus(com, errMsg);
 }
 
 void MainWindow::resPortUpdate(struct testResult *tRes, int com)
 {
-	updateResult(tRes, com);
+	return updateResult(tRes, com);
 }
 
 void MainWindow::resPortUpdateInDataPackTest(struct testResult *tRes, int com)
 {
-	updateResultInDataPackTest(tRes, com);
+	return updateResultInDataPackTest(tRes, com);
+}
+
+void MainWindow::resMctrlUpdate(struct mctrlResult *mctrlRes, int com)
+{
+	return updateResultMctrl(mctrlRes, com);
 }
 
 void MainWindow::openPortErr(QString errMsg)
