@@ -28,18 +28,65 @@ void MainWindow::portErrStatus(int com, QString errMsg)
 
 void MainWindow::updateResult(struct testResult *tRes, int com)
 {
-	ui->treeWidget->topLevelItem(com-1)->child(0)->setText(1, QString::number(tRes->round));
-	ui->treeWidget->topLevelItem(com-1)->child(1)->setText(1, QString::number(tRes->txlen));
-	ui->treeWidget->topLevelItem(com-1)->child(2)->setText(1, QString::number(tRes->rxlen));
+	QTreeWidgetItem *round = ui->treeWidget->topLevelItem(com-1)->child(0);
+	QTreeWidgetItem *txlen = ui->treeWidget->topLevelItem(com-1)->child(1);
+	QTreeWidgetItem *rxlen = ui->treeWidget->topLevelItem(com-1)->child(2);
+	QTreeWidgetItem *err = ui->treeWidget->topLevelItem(com-1)->child(3);
+	QTreeWidgetItem *ecerr = ui->treeWidget->topLevelItem(com-1)->child(4);
+	QTreeWidgetItem *mctrl = ui->treeWidget->topLevelItem(com-1)->child(6);
+
+	if(txlen->isHidden()){
+		txlen->setHidden(false);
+	}
+	if(rxlen->isHidden()){
+		rxlen->setHidden(false);
+	}
+	if(!mctrl->isHidden()){
+		mctrl->setHidden(true);
+	}
+	if(!err->isHidden()){
+		err->setHidden(false);
+	}
+	if(!ecerr->isHidden()){
+		ecerr->setHidden(true);
+	}
+
+	round->setText(1, QString::number(tRes->round));
+	txlen->setText(1, QString::number(tRes->txlen));
+	rxlen->setText(1, QString::number(tRes->rxlen));
+	err->setText(1, QString::number(tRes->err));
 }
 
 void MainWindow::updateResultInDataPackTest(struct testResult *tRes, int com)
 {
-	ui->treeWidget->topLevelItem(com-1)->child(0)->setText(1, QString::number(tRes->round));
-	ui->treeWidget->topLevelItem(com-1)->child(1)->setText(1, QString::number(tRes->txlen));
-	ui->treeWidget->topLevelItem(com-1)->child(2)->setText(1, QString::number(tRes->rxlen));
-	ui->treeWidget->topLevelItem(com-1)->child(3)->setText(1, QString::number(tRes->err));
-	ui->treeWidget->topLevelItem(com-1)->child(4)->setText(1, QString::number(tRes->ecerr));
+	QTreeWidgetItem *round = ui->treeWidget->topLevelItem(com-1)->child(0);
+	QTreeWidgetItem *txlen = ui->treeWidget->topLevelItem(com-1)->child(1);
+	QTreeWidgetItem *rxlen = ui->treeWidget->topLevelItem(com-1)->child(2);
+	QTreeWidgetItem *err = ui->treeWidget->topLevelItem(com-1)->child(3);
+	QTreeWidgetItem *ecerr = ui->treeWidget->topLevelItem(com-1)->child(4);
+	QTreeWidgetItem *mctrl = ui->treeWidget->topLevelItem(com-1)->child(6);
+
+	if(txlen->isHidden()){
+		txlen->setHidden(false);
+	}
+	if(rxlen->isHidden()){
+		rxlen->setHidden(false);
+	}
+	if(err->isHidden()){
+		err->setHidden(false);
+	}
+	if(ecerr->isHidden()){
+		ecerr->setHidden(false);
+	}
+	if(!mctrl->isHidden()){
+		mctrl->setHidden(true);
+	}
+
+	round->setText(1, QString::number(tRes->round));
+	txlen->setText(1, QString::number(tRes->txlen));
+	rxlen->setText(1, QString::number(tRes->rxlen));
+	err->setText(1, QString::number(tRes->err));
+	ecerr->setText(1, QString::number(tRes->ecerr));
 }
 
 void MainWindow::updateResultMctrl(struct mctrlResult *mctrlRes, int com)
@@ -50,15 +97,36 @@ void MainWindow::updateResultMctrl(struct mctrlResult *mctrlRes, int com)
 	bool dcd = mctrlRes->dcd;
 	bool dsr = mctrlRes->dsr;
 	bool ri = mctrlRes->ri;
-	QTreeWidgetItem *DTR = ui->treeWidget->topLevelItem(com-1)->child(6)->child(0);
-	QTreeWidgetItem *RTS = ui->treeWidget->topLevelItem(com-1)->child(6)->child(1);
-	QTreeWidgetItem *CTS = ui->treeWidget->topLevelItem(com-1)->child(6)->child(2);
-	QTreeWidgetItem *DCD = ui->treeWidget->topLevelItem(com-1)->child(6)->child(3);
-	QTreeWidgetItem *DSR = ui->treeWidget->topLevelItem(com-1)->child(6)->child(4);
-	QTreeWidgetItem *RNG = ui->treeWidget->topLevelItem(com-1)->child(6)->child(5);
+	QTreeWidgetItem *mctrl = ui->treeWidget->topLevelItem(com-1)->child(6);
+	QTreeWidgetItem *DTR = mctrl->child(0);
+	QTreeWidgetItem *RTS = mctrl->child(1);
+	QTreeWidgetItem *CTS = mctrl->child(2);
+	QTreeWidgetItem *DCD = mctrl->child(3);
+	QTreeWidgetItem *DSR = mctrl->child(4);
+	QTreeWidgetItem *RNG = mctrl->child(5);
+	QTreeWidgetItem *round = ui->treeWidget->topLevelItem(com-1)->child(0);
+	QTreeWidgetItem *txlen = ui->treeWidget->topLevelItem(com-1)->child(1);
+	QTreeWidgetItem *rxlen = ui->treeWidget->topLevelItem(com-1)->child(2);
+	QTreeWidgetItem *err = ui->treeWidget->topLevelItem(com-1)->child(3);
+	QTreeWidgetItem *ecerr = ui->treeWidget->topLevelItem(com-1)->child(4);
+
+	if(!txlen->isHidden()){
+		txlen->setHidden(true);
+	}
+	if(!rxlen->isHidden()){
+		rxlen->setHidden(true);
+	}
+	if(!err->isHidden()){
+		err->setHidden(true);
+	}
+	if(!ecerr->isHidden()){
+		ecerr->setHidden(true);
+	}
+	if(mctrl->isHidden()){
+		mctrl->setHidden(false);
+	}
 	
-	ui->treeWidget->topLevelItem(com-1)->child(0)->setText(1,
-										 QString::number(mctrlRes->round));
+	round->setText(1, QString::number(mctrlRes->round));
 	
 	if(dtr){
 		DTR->setText(1, "O");

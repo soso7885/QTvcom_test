@@ -4,13 +4,9 @@
 void Tester::openCloseTest(void)
 {
 	int i;
-	int res = 0;
-	int lock;
-	struct testResult tRes;
-	QByteArray txbuf;
-	QByteArray rxbuf;
 
-	/* Initial */
+	timer = new QTimer(this);
+	/*------------- Initial -----------------*/
 	txbuf.resize(TXDATALEN);
 	for(i = 0; i < TXDATALEN; i++){
 		if(i == 0){
@@ -22,95 +18,48 @@ void Tester::openCloseTest(void)
 			}
 		}
 	}
-	lock = 1;
+
 	tRes.txlen = 0;
 	tRes.rxlen = 0;
-	tRes.round = 0;
+	tRes.round = 1;
 	tRes.err = 0;
-	tRes.ecerr = 0;
-	isRunning = 1;
-	/* Initial End */
-	
-	do{
-		/* 
-		 * Already open serial, 
-		 * so donot open serial in round 1
-		*/
-		if(tRes.round > 0 && lock == 0){
-			/* OPEN */
-			if(serial.open(QIODevice::ReadWrite)){
-				serial.setBaudRate(pInfo.BaudRate);
-				serial.setDataBits(QSerialPort::Data8);
-				serial.setParity(QSerialPort::NoParity);
-				serial.setStopBits(QSerialPort::OneStop);
-				serial.setFlowControl(QSerialPort::NoFlowControl);
-			}
-			emit openUpdate(com);
-			lock = 1;
-		}
-
-		if(serial.isWritable()){
-			tRes.txlen = serial.write(txbuf);
-			if(tRes.txlen < 0){
-				SERIAL_CREATE_ERRMSG("Write failed:\n");
-				break;
-			}
-			if(tRes.txlen != txbuf.size()){
-				qDebug() << "txlen" << tRes.txlen << "!= 1024";
-				continue;
-			}
-			if(!serial.waitForBytesWritten(WRITEWAITTIME)){
-				SERIAL_CREATE_ERRMSG("Write timeout:\n");
-				break;
-			}
-		}
-		/* Read data */
-		if(serial.isReadable()){
-			rxbuf = serial.readAll();   // appoint the read buffer
-
-			do{
-				rxbuf.append(serial.readAll());	 // read data
-			}while(serial.waitForReadyRead(READWAITTIME));
-
-			if(serial.error() == QSerialPort::ReadError){
-				SERIAL_CREATE_ERRMSG("Read failed:\n");
-				break;
-			}
-			if(serial.error() == QSerialPort::TimeoutError && rxbuf.isEmpty()){
-				SERIAL_CREATE_ERRMSG("Read timeout:\n");
-				break;
-			}
-			/* Data compare */
-			res = QString::compare(rxbuf, txbuf);
-			if(res){
-				SERIAL_CREATE_ERRMSG("Data incorrect, round: ", tRes.round);
-			}
-			tRes.rxlen = rxbuf.size();
-		}
-
-		if(tRes.txlen == TXDATALEN && tRes.rxlen == TXDATALEN){
-			qDebug("Com %d, Round %d", com, tRes.round);
-			if(!res){
-				emit OKUpdate(com);
-			}
-			/* Close */
-			if(lock == 1){
-				serial.close();
-				emit closeUpdate(com);
-				lock = 0;
-			}
-			emit resUpdate(&tRes, com);
-			tRes.round++;
-		}
-		/* sleep 1 sec */
-		QThread::currentThread()->sleep(1);
-
-	}while(isRunning);
-
-	emit closeUpdate(com);
-	closeSerialPort();
-	freeResrc();
-	delete this;
+	/*---------------------------------------*/
+	bufFlush();	
+	connect(serial, SIGNAL(readyRead()), this, SLOT(readHandle()));
+	connect(serial, SIGNAL(readChannelFinished()), this, SLOT(result()));
+	connect(serial, SIGNAL(bytesWritten(qint64)), this, SLOT(writeHandle()));
+	connect(timer, SIGNAL(timeout()), this, SLOT(ocTestClose()));	
+	timer->start(10*1000);	// 10sec
+	writeAll();
 }
 
+void Tester::ocTestClose(void)
+{
+	qDebug("CLose !!!!");
+	closeSerialPort();
+	ocTestOpen();
+}
+	
+void Tester::ocTestOpen(void)
+{
+	qDebug("Open !!!!");
+	if(serial->open(QIODevice::ReadWrite)){
+		serial->setBaudRate(pInfo.BaudRate);
+		serial->setDataBits(QSerialPort::Data8);
+		serial->setParity(QSerialPort::NoParity);
+		serial->setStopBits(QSerialPort::OneStop);
+		serial->setFlowControl(QSerialPort::NoFlowControl);
+		emit openUpdate(com);
+		bufFlush();
+		connect(serial, SIGNAL(readyRead()), this, SLOT(readHandle()));
+		connect(serial, SIGNAL(readChannelFinished()), this, SLOT(result()));
+		connect(serial, SIGNAL(bytesWritten(qint64)), this, SLOT(writeHandle()));
+		tRes.round++;
+		timer->start(10*1000);
+		writeAll();
+	}else{
+		qDebug("ocTestOpen Error !");
+	}
+}
+	
 

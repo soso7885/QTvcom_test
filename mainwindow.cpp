@@ -11,8 +11,8 @@ void MainWindow::initTester(int com)
 	tester->moveToThread(thread);			// combine thread
 	connect(thread, SIGNAL(started()), tester, SLOT(startTest()));	// connect started to startTest
 	connect(tester, SIGNAL(finished()), thread, SLOT(quit()));
-	connect(tester, SIGNAL(finished()), tester, SLOT(deleteLater()));
-	connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
+	connect(thread, SIGNAL(finished()), tester, SLOT(terminate()));
+	connect(tester, SIGNAL(finished()), tester, SLOT(terminate()));
 	/* Status signal connection !! */
 	connect(tester, SIGNAL(openUpdate(int)), this, SLOT(openPortUpdate(int)));
 	connect(tester, SIGNAL(closeUpdate(int)), this, SLOT(closePortUpdate(int)));
@@ -43,9 +43,10 @@ void MainWindow::initTester(int com)
 void MainWindow::closeTester(int com)
 {
 	if(testerVect[com-1] != NULL){
-		testerVect[com-1]->isRunning = 0;
+		emit testerVect[com-1]->finished();
 		ui->statusBar->showMessage(QString("Closing COM%1 ...")
-									.arg(com)); 
+									.arg(com));
+		testerVect[com-1] = NULL;
 	}
 }
 
@@ -89,6 +90,7 @@ void MainWindow::openPortErr(QString errMsg)
 	QMessageBox::critical(this, "Error", errMsg);
 	ui->statusBar->showMessage("Open Port error...");
 }
+
 /*---------------------------------------------------------*/
 void MainWindow::startEnable1(void)
 {

@@ -15,7 +15,6 @@ int detectTestMode(QString testmode, struct port_info *pInfo)
 	}else if(!QString::compare(testmode, QString(MCTRL))){
 		pInfo->testMode = MCTRL_TEST;
 		qDebug("Select Modem control test");
-		/* TODO: clean another test result */
 	}else{
 		qDebug("Error ! no such test mode");
 		return -1;
@@ -56,21 +55,23 @@ int Tester::takePortInfo(void)
 
 int Tester::openSerialPort(void)
 {
+	serial = new QSerialPort(this);
+
 	if(takePortInfo() == -1){
 		return -1;
 	}
 	
-	serial.setPortName(pInfo.name);
+	serial->setPortName(pInfo.name);
 	
-	if(serial.open(QIODevice::ReadWrite)){
-		serial.setBaudRate(pInfo.BaudRate);
-		serial.setDataBits(QSerialPort::Data8);
-		serial.setParity(QSerialPort::NoParity);
-		serial.setStopBits(QSerialPort::OneStop);
-		serial.setFlowControl(QSerialPort::NoFlowControl);
+	if(serial->open(QIODevice::ReadWrite)){
+		serial->setBaudRate(pInfo.BaudRate);
+		serial->setDataBits(QSerialPort::Data8);
+		serial->setParity(QSerialPort::NoParity);
+		serial->setStopBits(QSerialPort::OneStop);
+		serial->setFlowControl(QSerialPort::NoFlowControl);
 	}else{
 		qDebug("Open Port error");
-		emit openErrUpdate(serial.errorString());
+		emit openErrUpdate(serial->errorString());
 		emit buttonUpdate(com, 1);
 		return -1;
 	}
@@ -81,8 +82,9 @@ int Tester::openSerialPort(void)
 
 void Tester::closeSerialPort(void)
 {
-	serial.close();
-	emit buttonUpdate(com, 1);
+	emit closeUpdate(com);
+	serial->disconnect();
+	serial->close();
 }
 	
 void Tester::freeResrc(void)

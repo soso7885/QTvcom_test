@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
                                         
-Tester::Tester(Ui::MainWindow *ui, int com) :
-		serial(this)
+Tester::Tester(Ui::MainWindow *ui, int com) 
 {     
 	this->com = com;  
 	this->ui = ui;
@@ -143,12 +142,17 @@ Tester::Tester(Ui::MainWindow *ui, int com) :
 
 Tester::~Tester(void)                                
 {
+	qDebug("Delete COM%d", com);
+	delete serial;
+	if(timer != NULL){
+		delete timer;	// only open-close test should delete
+	}
 	qDebug() << "Free tester class :" << this;	
 }
  
 void Tester::startTest(void)                         
-{                                                    
-    if(openSerialPort() == -1){                      
+{          
+	if(openSerialPort() == -1){                      
 		freeResrc();
 	}else{
 		emit openUpdate(com);
@@ -172,3 +176,198 @@ void Tester::startTest(void)
 		}
 	}
 }
+
+void Tester::bufFlush(void)
+{
+	QByteArray flushBuf;
+
+	if(serial->isOpen()){
+		flushBuf.resize(TXDATALEN);
+		flushBuf = serial->readAll();
+	
+		do{
+			flushBuf.append(serial->read(serial->bytesAvailable()));
+		}while(serial->bytesAvailable() != 0);
+
+		qDebug("Flush %d byte", flushBuf.size());
+	}else{
+		qDebug("No serial port availible");
+	}
+}
+		
+
+void Tester::readHandle(void)
+{
+	if(serial->isOpen()){
+		rxbuf.resize(TXDATALEN);
+		rxbuf = serial->readAll();
+
+		do{
+			rxbuf.append(serial->read(serial->bytesAvailable()));
+        }while(serial->bytesAvailable() != 0);
+
+		tRes.rxlen += rxbuf.size();
+		emit serial->readChannelFinished();
+	}else{
+        qDebug("No serial port availible");
+	}
+}
+
+void Tester::writeAll(void)
+{
+	qint64 tmp;
+	qint64 total = 0;
+	qint64 hopeWrite;
+
+	if(pInfo.testMode == PACKBYCHAR_TEST){
+		if(pInfo.ecTestMode == ASCII){
+			hopeWrite = ASCII_TXDATALEN;
+		}else{
+			hopeWrite = HEX_TXDATALEN;
+		}
+	}else{
+		hopeWrite = TXDATALEN;
+	}
+
+	do{
+		tmp = serial->write(txbuf);
+		total += tmp;
+	}while(total != hopeWrite);
+
+	tRes.txlen += total;
+}
+		
+void Tester::writeHandle(void)
+{
+	if(serial->isOpen()){
+		writeAll();
+	}else{
+		qDebug("No serial port availible");
+	}
+}
+
+int Tester::compared(void)
+{
+	int i;
+	char *res;
+	char err[32];
+
+	if(pInfo.testMode == PACKBYCHAR_TEST){
+		unsigned char ec = pInfo.ec;
+		// XXX
+		for(i = 0; i < rxbuf.size()-1; i++){
+			if(qAbs((unsigned char)rxbuf.at(i+1) -
+				(unsigned char )rxbuf.at(i)) != 1){
+				if(pInfo.ecTestMode == ASCII){
+					/*
+				 	* In ASCII mode,
+				 	* don't check the last of
+				 	* character in testing string '!'
+					*/
+					if((unsigned char)rxbuf.at(i+1) != '!'){
+						sprintf(err, "Data mess:\n(%d)<%c , %c>",
+									i, rxbuf.at(i), rxbuf.at(i+1));
+						qDebug() << rxbuf;
+						res = err;
+						tRes.err++;
+						SERIAL_CREATE_ERRMSG(res, tRes.round);
+						return -1;
+					}
+				}else{
+					/*
+				 	* In Hex mode
+				 	* don't check the last of
+				 	* testing number 255
+					*/
+					if((unsigned char)rxbuf.at(i) != 255){
+						sprintf(err, "Data mess:\n(%d)<%#02x , %#02x>",
+								i, (unsigned char)rxbuf.at(i),
+								(unsigned char)rxbuf.at(i+1));
+						res = err;
+						tRes.err++;
+						SERIAL_CREATE_ERRMSG(res, tRes.round);
+						return -1;
+					}
+				}
+			}
+		}
+		if((unsigned char)rxbuf.at(rxbuf.size()-1) != ec){
+			if(pInfo.ecTestMode == ASCII){		// ASCII
+				sprintf(err, "End char err\n<%c , %c>",
+					(unsigned char)rxbuf.at(rxbuf.size()-1), ec);
+			}else{	// Hex
+				sprintf(err, "End char err\n<%#02x , %#02x>",
+					(unsigned char)rxbuf.at(rxbuf.size()-1), ec);
+			}
+			res = err;
+			SERIAL_CREATE_ERRMSG(res, tRes.round);
+			tRes.ecerr++;
+			return -1;
+		}
+	}else{
+		/*
+		 * for simple test, open-close test check
+		*/	
+		for(i = 0; i < rxbuf.size()-1; i++){
+			if(qAbs((unsigned char)rxbuf.at(i+1) - 
+				(unsigned char )rxbuf.at(i)) != 1){
+				if((unsigned char)rxbuf.at(i+1) != '!'){
+					tRes.err++;
+					qDebug("Data mess:(%d)<%c , %c>\n", i, rxbuf.at(i), rxbuf.at(i+1));
+					snprintf(err, 32, "Data mess:\n(%d)<%c , %c>", 
+							i, rxbuf.at(i), rxbuf.at(i+1));
+					res = err;
+					SERIAL_CREATE_ERRMSG(res, tRes.round);
+				
+					return -1;
+				}
+			}
+		}
+	}
+	return 0;
+}
+	
+void Tester::result(void)
+{
+	if(serial->isOpen()){
+		if(compared() == 0){
+			if(tRes.err == 0){
+				emit OKUpdate(com);
+			}
+		}
+		// XXX
+		// OPEN-CLOSE test's test round ++ in his testing function
+		if(pInfo.testMode == SIMPLE_TEST){
+			tRes.round = tRes.rxlen/TXDATALEN;
+			emit resUpdate(&tRes, com);
+		}else if(pInfo.testMode == PACKBYCHAR_TEST){
+			if(pInfo.ecTestMode == ASCII){
+				tRes.round = tRes.rxlen/ASCII_TXDATALEN;
+			}else{
+				tRes.round = tRes.rxlen/HEX_TXDATALEN;
+			}
+			emit resUpdateInDataPack(&tRes, com);
+		}
+	}else{
+		qDebug("No serial port availible");
+	}
+}
+
+void Tester::terminate(void)
+{
+	if(serial->isOpen()){
+		qDebug("In COM%d terminate", com);
+		emit buttonUpdate(com, 1);
+		closeSerialPort();
+		freeResrc();
+		/*
+		 * As long as you're careful, 
+		 * it's OK for an object to commit 
+		 * suicide (delete this).
+		*/
+		delete this;
+	}else{
+		qDebug("No serial port availible (%d)", com);
+	}
+}
+

@@ -17,7 +17,7 @@ QT += serialport
 # with no qDebug output
 #
 ########################
-DEFINES += QT_NO_DEBUG_OUTPUT
+#DEFINES += QT_NO_DEBUG_OUTPUT
 
 # Input
 HEADERS += mainwindow.h

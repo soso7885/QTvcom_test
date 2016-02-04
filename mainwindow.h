@@ -16,6 +16,7 @@
 #include <QVector>
 #include <QDebug>
 #include <QBrush>
+#include <QTimer>
 
 #define COM1	1
 #define COM2	2
@@ -63,7 +64,7 @@
 #define err1(head)			\
 	do{	QString *err = new QString;			\
 		*err = head;						\
-		err->append(serial.errorString());	\
+		err->append(serial->errorString());	\
 		qDebug() << *err;					\
 		emit errUpdate(com, *err);			\
 		delete err;	}while(0);
@@ -126,7 +127,10 @@ class Tester : public QObject
 private:
 	Ui::MainWindow *ui;
 	struct port_info pInfo;
-	QSerialPort serial;
+	struct testResult tRes;
+	struct mctrlResult mctrlRes;
+	QSerialPort *serial;
+	QTimer *timer = NULL;
 	int com;	// To decide which ComPort is running
 	
 	QLineEdit *ui_comPortName;
@@ -136,10 +140,18 @@ private:
 	QRadioButton *ui_hexButton;
 	QLineEdit *ui_ecEditer;
 
+	QByteArray txbuf;
+	QByteArray rxbuf;
+
 	int openSerialPort(void);
 	void closeSerialPort(void);
 	int takePortInfo(void);
 	void freeResrc(void);
+	void bufFlush(void);
+	void writeAll(void);
+	int compared(void);
+	void ocTestOpen(void);
+	void mctrlCheck(void);
 
 public:
 	explicit Tester(Ui::MainWindow *ui, int com);
@@ -156,6 +168,13 @@ public:
 
 public slots:
 	void startTest(void);
+	void writeHandle(void);
+	void readHandle(void);
+	void result(void);
+	void terminate(void);
+	void ocTestClose(void);
+	void DTRhandle(bool set);
+	void RTShandle(bool set);
 
 signals:
 	void finished(void);
@@ -168,7 +187,7 @@ signals:
 	void resUpdate(struct testResult *tRes, int com);
 	void resUpdateInDataPack(struct testResult *tRes, int com);
 	void mcrtrlResUpdate(struct mctrlResult *mctrlRes, int com);
-	
+
 	void buttonUpdate(int com, bool able);
 	void openErrUpdate(QString errMsg);
 };
