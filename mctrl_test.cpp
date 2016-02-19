@@ -24,13 +24,15 @@ void Tester::RTShandle(bool set)
 }
 	
 void Tester::mctrlCheck(void)
-{		
-	int res = serial->pinoutSignals();
+{
+	int res;
 	/*
 	 * must wait for serial pin 
 	 * signal handle done.
 	*/
-	QThread::currentThread()->sleep(2);
+	QThread::currentThread()->sleep(1);
+	
+	res = serial->pinoutSignals();
 
 	if(res & QSerialPort::DataTerminalReadySignal){
 		mctrlRes.dtr = true;	

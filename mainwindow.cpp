@@ -43,6 +43,7 @@ void MainWindow::initTester(int com)
 void MainWindow::closeTester(int com)
 {
 	if(testerVect[com-1] != NULL){
+		printf("Closing button .....\n");
 		emit testerVect[com-1]->finished();
 		ui->statusBar->showMessage(QString("Closing COM%1 ...")
 									.arg(com));
