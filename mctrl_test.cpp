@@ -5,10 +5,14 @@ void Tester::DTRhandle(bool set)
 {
 	mctrlCheck();
 
-	if(set){
-		serial->setRequestToSend(true);
+	if(serial->isOpen()){
+		if(set){
+			serial->setRequestToSend(true);
+		}else{
+			serial->setRequestToSend(false);
+		}
 	}else{
-		serial->setRequestToSend(false);
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 
@@ -16,10 +20,14 @@ void Tester::RTShandle(bool set)
 {
 	mctrlCheck();
 
-	if(set){
-		serial->setDataTerminalReady(false);
+	if(serial->isOpen()){
+		if(set){
+			serial->setDataTerminalReady(false);
+		}else{
+			serial->setDataTerminalReady(true);
+		}
 	}else{
-		serial->setDataTerminalReady(true);
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 	
@@ -81,8 +89,11 @@ void Tester::mctrlCheck(void)
 	}else{
 		emit OKUpdate(com);
 	}
+
 	emit mcrtrlResUpdate(&mctrlRes, com);
 	mctrlRes.round++;
+	
+	QCoreApplication::processEvents();
 }
 
 void Tester::mctrlTest(void)
@@ -94,7 +105,7 @@ void Tester::mctrlTest(void)
 	connect(serial, SIGNAL(requestToSendChanged(bool)), this, SLOT(RTShandle(bool)));
 	connect(serial, SIGNAL(dataTerminalReadyChanged(bool)), this, SLOT(DTRhandle(bool)));
 
-	serial->setDataTerminalReady(true);
+	serial->setDataTerminalReady(true);	// test Entry
 }
 	
 

@@ -191,7 +191,7 @@ void Tester::bufFlush(void)
 
 		qDebug("Flush %d byte", flushBuf.size());
 	}else{
-		qDebug("No serial port availible");
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 		
@@ -209,7 +209,7 @@ void Tester::readHandle(void)
 		tRes.rxlen += rxbuf.size();
 		emit serial->readChannelFinished();
 	}else{
-        qDebug("No serial port availible");
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 
@@ -242,7 +242,7 @@ void Tester::writeHandle(void)
 	if(serial->isOpen()){
 		writeAll();
 	}else{
-		qDebug("No serial port availible");
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 
@@ -349,7 +349,7 @@ void Tester::result(void)
 			emit resUpdateInDataPack(&tRes, com);
 		}
 	}else{
-		qDebug("No serial port availible");
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 
@@ -365,9 +365,9 @@ void Tester::terminate(void)
 		 * it's OK for an object to commit 
 		 * suicide (delete this).
 		*/
-		delete this;
+//		delete this;
 	}else{
-		qDebug("No serial port availible (%d)", com);
+		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}
 }
 
