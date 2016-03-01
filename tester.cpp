@@ -335,10 +335,10 @@ void Tester::result(void)
 				emit OKUpdate(com);
 			}
 		}
-		// XXX
-		// OPEN-CLOSE test's test round ++ in his testing function
 		if(pInfo.testMode == SIMPLE_TEST){
 			tRes.round = tRes.rxlen/TXDATALEN;
+			emit resUpdate(&tRes, com);
+		}else if(pInfo.testMode == OPENCLOSE_TEST){
 			emit resUpdate(&tRes, com);
 		}else if(pInfo.testMode == PACKBYCHAR_TEST){
 			if(pInfo.ecTestMode == ASCII){
@@ -347,6 +347,8 @@ void Tester::result(void)
 				tRes.round = tRes.rxlen/HEX_TXDATALEN;
 			}
 			emit resUpdateInDataPack(&tRes, com);
+		}else{
+			// other test mode result
 		}
 	}else{
 		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
