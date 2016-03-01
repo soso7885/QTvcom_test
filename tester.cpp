@@ -143,11 +143,11 @@ Tester::Tester(Ui::MainWindow *ui, int com)
 Tester::~Tester(void)                                
 {
 	qDebug("Delete COM%d", com);
-	delete serial;
 	if(timer != NULL){
 		delete timer;	// only open-close test should delete
 	}
 	qDebug() << "Free tester class :" << this;	
+	delete serial;
 }
  
 void Tester::startTest(void)                         
@@ -365,7 +365,7 @@ void Tester::terminate(void)
 		 * it's OK for an object to commit 
 		 * suicide (delete this).
 		*/
-//		delete this;
+		delete this;
 	}else{
 		qDebug("com %d: Serial port is not open %s(%d)", com, __func__, __LINE__);
 	}

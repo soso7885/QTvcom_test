@@ -92,7 +92,11 @@ void Tester::mctrlCheck(void)
 
 	emit mcrtrlResUpdate(&mctrlRes, com);
 	mctrlRes.round++;
-	
+	/*
+	 * To handle the events in event Q
+	 * I think it's maybe called the currentThread()->sleep(1);
+	 * function, the `close` signal is stored in event Q,
+	*/
 	QCoreApplication::processEvents();
 }
 
