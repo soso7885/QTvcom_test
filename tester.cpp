@@ -1,6 +1,9 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-                                        
+#include "ui_mainwindow.h"                     
+/*
+ * To collect all the port 
+ * infomaiton on UI
+*/
 Tester::Tester(Ui::MainWindow *ui, int com) 
 {     
 	this->com = com;  
@@ -41,6 +44,7 @@ Tester::Tester(Ui::MainWindow *ui, int com)
 			break;
 		case COM5:
 			this->ui_comPortName = ui->comName5;
+		// OPEN-CLOSE test's test round ++ in his testing function
 			this->ui_baudRate = ui->baudRate5;
 			this->ui_testMod = ui->test5;
 			this->ui_ascIIButton = ui->ascIIButton5;
@@ -252,9 +256,9 @@ int Tester::compared(void)
 	char *res;
 	char err[32];
 
+	// XXX: too ugly
 	if(pInfo.testMode == PACKBYCHAR_TEST){
 		unsigned char ec = pInfo.ec;
-		// XXX
 		for(i = 0; i < rxbuf.size()-1; i++){
 			if(qAbs((unsigned char)rxbuf.at(i+1) -
 				(unsigned char )rxbuf.at(i)) != 1){
@@ -313,7 +317,7 @@ int Tester::compared(void)
 				(unsigned char )rxbuf.at(i)) != 1){
 				if((unsigned char)rxbuf.at(i+1) != '!'){
 					tRes.err++;
-					qDebug("Data mess:(%d)<%c , %c>\n", i, rxbuf.at(i), rxbuf.at(i+1));
+					qDebug("Data mess:(%d)<%x , %x>\n", i, rxbuf.at(i), rxbuf.at(i+1));
 					snprintf(err, 32, "Data mess:\n(%d)<%c , %c>", 
 							i, rxbuf.at(i), rxbuf.at(i+1));
 					res = err;

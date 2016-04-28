@@ -119,7 +119,7 @@ struct mctrlResult{
 	bool ri;
 };
 
-/*------------------------------------------------*/
+/*-------------------------------------------------------------*/
 class Tester : public QObject
 {
 	Q_OBJECT
@@ -131,8 +131,8 @@ private:
 	struct mctrlResult mctrlRes;
 	QSerialPort *serial;
 	QTimer *timer = NULL;
+
 	int com;	// To decide which ComPort is running
-	
 	QLineEdit *ui_comPortName;
 	QComboBox *ui_baudRate;
 	QComboBox *ui_testMod;
@@ -156,8 +156,6 @@ private:
 public:
 	explicit Tester(Ui::MainWindow *ui, int com);
 	~Tester(void);	
-	/* Main thread will use it to close child thread */
-	bool isRunning;
 
 	/* Test function */
 	void simpleTest(void);
