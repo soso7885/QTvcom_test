@@ -268,7 +268,9 @@ int Tester::compared(void)
 				 	* don't check the last of
 				 	* character in testing string '!'
 					*/
-					if((unsigned char)rxbuf.at(i+1) != '!'){
+					if((unsigned char)rxbuf.at(i+1) > '!' &&
+						(unsigned char)rxbuf.at(i) >= '!')
+					{
 						sprintf(err, "Data mess:\n(%d)<%c , %c>",
 									i, rxbuf.at(i), rxbuf.at(i+1));
 						qDebug() << rxbuf;
@@ -315,7 +317,9 @@ int Tester::compared(void)
 		for(i = 0; i < rxbuf.size()-1; i++){
 			if(qAbs((unsigned char)rxbuf.at(i+1) - 
 				(unsigned char )rxbuf.at(i)) != 1){
-				if((unsigned char)rxbuf.at(i+1) != '!'){
+				if((unsigned char)rxbuf.at(i+1) > '!' &&
+					(unsigned char)rxbuf.at(i) >= '!')
+				{
 					tRes.err++;
 					qDebug("Data mess:(%d)<%x , %x>\n", i, rxbuf.at(i), rxbuf.at(i+1));
 					snprintf(err, 32, "Data mess:\n(%d)<%c , %c>", 

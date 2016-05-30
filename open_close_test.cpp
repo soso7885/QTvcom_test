@@ -3,12 +3,10 @@
 
 void Tester::openCloseTest(void)
 {
-	int i;
-
 	timer = new QTimer(this);
 	/*------------- Initial -----------------*/
 	txbuf.resize(TXDATALEN);
-	for(i = 0; i < TXDATALEN; i++){
+	for(int i = 0; i < TXDATALEN; i++){
 		if(i == 0){
 			txbuf[i] = '!';
 		}else{
@@ -29,7 +27,7 @@ void Tester::openCloseTest(void)
 	connect(serial, SIGNAL(readChannelFinished()), this, SLOT(result()));
 	connect(serial, SIGNAL(bytesWritten(qint64)), this, SLOT(writeHandle()));
 	connect(timer, SIGNAL(timeout()), this, SLOT(ocTestClose()));	
-	timer->start(10*1000);	// 10sec
+	timer->start(80*1000);	// 10sec
 	writeAll();
 }
 
@@ -55,7 +53,7 @@ void Tester::ocTestOpen(void)
 		connect(serial, SIGNAL(readChannelFinished()), this, SLOT(result()));
 		connect(serial, SIGNAL(bytesWritten(qint64)), this, SLOT(writeHandle()));
 		tRes.round++;
-		timer->start(10*1000);
+		timer->start(80*1000);
 		writeAll();
 	}else{
 		qDebug("ocTestOpen Error !");

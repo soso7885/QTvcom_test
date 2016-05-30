@@ -3,11 +3,10 @@
 
 void Tester::packByCharTest(void)
 {
-	int i;
 	/*-------------- Initial txbuf -----------*/
 	if(pInfo.ecTestMode == ASCII){  // ASCII
 		txbuf.resize(ASCII_TXDATALEN);
-		for(i = 0; i < ASCII_TXDATALEN; i++){
+		for(int i = 0; i < ASCII_TXDATALEN; i++){
 			if(i == 0){
 				txbuf[i] = '!';
 			}else{
@@ -16,7 +15,7 @@ void Tester::packByCharTest(void)
 		}
 	}else{	// HEX
 		txbuf.resize(HEX_TXDATALEN);
-		for(i = 0; i < HEX_TXDATALEN; i++){
+		for(int i = 0; i < HEX_TXDATALEN; i++){
 			txbuf[i] = i;
 		}
 	}

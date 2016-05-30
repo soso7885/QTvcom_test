@@ -3,10 +3,9 @@
 
 void Tester::simpleTest(void)
 {
-	int i;
 	/*-------------- Initial txbuf -----------*/
 	txbuf.resize(TXDATALEN);
-	for(i = 0; i < TXDATALEN; i++){
+	for(int i = 0; i < TXDATALEN; i++){
 		if(i == 0){
 			txbuf[i] = '!';
 		}else{
